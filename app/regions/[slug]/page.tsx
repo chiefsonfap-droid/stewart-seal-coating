@@ -423,8 +423,22 @@ Northern Ontario faith communities understand resilience. Congregations maintain
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-dark to-primary py-20 md:py-32 text-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative bg-gradient-to-br from-primary-dark to-primary py-20 md:py-32 text-white overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={`/images/regions/${region.slug}-hero.webp`}
+            alt={`${region.displayName} landscape - Steward Seal Coating service area`}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Gradient Overlay for Text Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/70 to-primary/70" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6">
               {region.displayName} Faith Community Parking Lot Services

@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stewart Seal Coating - Image Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .header {
+      background: #1e40af;
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .header h1 { margin-bottom: 10px; }
+    .warning {
+      background: #dc2626;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .warning ul { margin-left: 20px; margin-top: 10px; }
+    .stats {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .stat { text-align: center; }
+    .stat-number { font-size: 2em; font-weight: bold; color: #1e40af; }
+    .stat-label { color: #666; margin-top: 5px; }
+    .section {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #1e40af;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card.error {
+      border-color: #dc2626;
+      background: #fee;
+    }
+    .card.fallback {
+      border-color: #f59e0b;
+      background: #fffbeb;
+    }
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #e5e7eb;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    .card-meta {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    .card-description {
+      font-size: 0.85em;
+      color: #888;
+      font-style: italic;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #e5e7eb;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .badge-unsplash { background: #000; color: #fff; }
+    .badge-pexels { background: #05A081; color: #fff; }
+    .badge-error { background: #dc2626; color: #fff; }
+    .badge-fallback { background: #f59e0b; color: #fff; }
+    .footer {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .approve-btn {
+      background: #10b981;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .approve-btn:hover {
+      background: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎨 Stewart Seal Coating - Image Preview</h1>
+    <p>Manual review required before downloading</p>
+    <p style="margin-top: 10px; opacity: 0.9;">Generated: 2025-12-20T06:53:32.420Z</p>
+  </div>
+
+  <div class="warning">
+    ⚠️ CRITICAL: Review ALL images for religious imagery
+    <ul>
+      <li>NO churches, cathedrals, mosques, synagogues, temples, or gurdwaras</li>
+      <li>NO religious symbols (crosses, crescents, stars, etc.)</li>
+      <li>NO identifiable religious architecture</li>
+    </ul>
+    <p style="margin-top: 10px;">If you see ANY religious imagery, DO NOT proceed. Edit image-sources.json to remove that entry.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-number">5/5</div>
+      <div class="stat-label">Regional Images</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">88/87</div>
+      <div class="stat-label">City Images</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">58</div>
+      <div class="stat-label">Fallback Images</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">0</div>
+      <div class="stat-label">Missing</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📍 Regional Images (5)</h2>
+    <div class="grid">
+      
+        <div class="card ">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Southwestern Ontario" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Southwestern Ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Central Ontario" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Central Ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Golden Horseshoe/Niagara" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Golden Horseshoe/Niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Eastern Ontario" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Eastern Ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Northern Ontario" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Northern Ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🏙️ City Images (87)</h2>
+    <div class="grid">
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/1048039/pexels-photo-1048039.jpeg?auto=compress&cs=tinysrgb&h=130" alt="London" class="card-image">
+          <div class="card-content">
+            <div class="card-title">London</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Scott Webb</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A serene meadow with a blue sky and fluffy clouds in London, Ontario.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/16849565/pexels-photo-16849565.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Kitchener" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kitchener</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Stuffedbox NG</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Canada geese foraging in a peaceful Kitchener park setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/2767540/pexels-photo-2767540.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Waterloo" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Waterloo</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Javon Swaby</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Abstract view of an urban tunnel at night with dynamic light trails and an industrial design.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/3279691/pexels-photo-3279691.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Cambridge" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Cambridge</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Javon Swaby</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Casino scene with dealer and players, featuring cards and chips, creating a suspenseful atmosphere.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/25566785/pexels-photo-25566785.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Guelph" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Guelph</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Nour Abiad</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A detailed close-up of a Corvette logo on a rain-covered surface, captured in Guelph, Canada.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35237042/pexels-photo-35237042.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Brantford" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Brantford</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 David Kwewum</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k aerial shot, above clouds, above the clouds</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Woodstock" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Woodstock</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Stratford" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Stratford</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="St. Thomas" class="card-image">
+          <div class="card-content">
+            <div class="card-title">St. Thomas</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/30402414/pexels-photo-30402414.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Sarnia" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Sarnia</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Yihan Wang</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Iconic Blue Water Bridge spanning between the USA and Canada over clear waters.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Chatham" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Chatham</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/10015932/pexels-photo-10015932.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Windsor" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Windsor</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Lauren Hedges</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A black squirrel eating a nut amidst colorful autumn leaves in an urban park setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Leamington" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Leamington</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Tillsonburg" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Tillsonburg</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Ingersoll" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Ingersoll</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Strathroy" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Strathroy</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Simcoe" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Simcoe</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/3279692/pexels-photo-3279692.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Owen Sound" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Owen Sound</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Javon Swaby</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Vibrant nightclub scene with dancing crowd and DJ in Cambridge, Canada.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.pexels.com/photos/8332322/pexels-photo-8332322.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Hanover" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Hanover</div>
+            <div class="card-meta">southwestern-ontario</div>
+            <div class="card-meta">📸 Mikhail Nilov</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">Top-down aerial view of lush green farmland with a house in a rural setting.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/3159734/pexels-photo-3159734.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Barrie" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Barrie</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Jason</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A person in a red winter coat and sunglasses stands against a clear blue sky.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/24440804/pexels-photo-24440804.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Orillia" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Orillia</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Patrick Bevan</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A rustic barn set against a forest backdrop under cloudy skies in Orillia, Ontario.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/34945533/pexels-photo-34945533.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Peterborough" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Peterborough</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Gurkirat Singh</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of blur judgement appropriate, buildings, cars</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Lindsay" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Lindsay</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Kawartha Lakes" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kawartha Lakes</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Midland" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Midland</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Penetanguishene" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Penetanguishene</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/33838963/pexels-photo-33838963.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Collingwood" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Collingwood</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Jeffrey Eisen</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Peaceful lakefront scene with trees and rock formations in Collingwood, Ontario.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Gravenhurst" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Gravenhurst</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Bracebridge" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Bracebridge</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Huntsville" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Huntsville</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Parry Sound" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Parry Sound</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/32756972/pexels-photo-32756972.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Cobourg" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Cobourg</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Yajun Dong</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Cute brown squirrel standing curiously on green grass in Cobourg, Ontario.</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Port Hope" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Port Hope</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Campbellford" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Campbellford</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Alliston" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Alliston</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Bradford" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Bradford</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Innisfil" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Innisfil</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="New Tecumseth" class="card-image">
+          <div class="card-content">
+            <div class="card-title">New Tecumseth</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1606138278806-49e8b1bd28a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxNdXNrb2thJTIwT250YXJpbyUyMGxha2UlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA2OHww&ixlib=rb-4.1.0&q=80&w=200" alt="Wasaga Beach" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Wasaga Beach</div>
+            <div class="card-meta">central-ontario</div>
+            <div class="card-meta">📸 Daniel Vogel</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">bird's eye view of trees beside body of water</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Hamilton" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Hamilton</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Andre Furtado</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A joyful woman in a sunflower field with bubbles, expressing happiness on a summer day.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/3777764/pexels-photo-3777764.jpeg?auto=compress&cs=tinysrgb&h=130" alt="St. Catharines" class="card-image">
+          <div class="card-content">
+            <div class="card-title">St. Catharines</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Andre Furtado</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Serene winter landscape featuring a historic watermill in snowy St. Catharines, Ontario, Canada.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/6528807/pexels-photo-6528807.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Niagara Falls" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Niagara Falls</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 ARK FILMS</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A picturesque winter cityscape featuring Skylon Tower amid bare trees in Canada.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35237027/pexels-photo-35237027.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Welland" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Welland</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 David Kwewum</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k aerial shot, above clouds, above the clouds</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Grimsby" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Grimsby</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Fort Erie" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Fort Erie</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Pelham" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Pelham</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Lincoln" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Lincoln</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Orangeville" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Orangeville</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Ancaster" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Ancaster</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Dundas" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Dundas</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1528913775512-624d5aa20857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxPbnRhcmlvJTIwdmluZXlhcmQlMjBhZXJpYWwlMjB2aWV3fGVufDB8MHx8fDE3NjYyMTIwNjl8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Stoney Creek" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Stoney Creek</div>
+            <div class="card-meta">golden-horseshoe-niagara</div>
+            <div class="card-meta">📸 Zach Reiner</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">green plants on brown field under blue sky during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Ottawa" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Ottawa</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Jane  T D.</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Spacious lounge with modern decor and large windows showcasing a snowy Ottawa view.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/905248/pexels-photo-905248.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Kingston" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kingston</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Harvey Reed</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A vibrant Northern Cardinal perched on a snowy branch in Kingston, Canada.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/29738642/pexels-photo-29738642.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Belleville" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Belleville</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 John Henry</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A red Adirondack chair casts a striking shadow on a snowy landscape, creating a serene winter scene.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35237026/pexels-photo-35237026.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Cornwall" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Cornwall</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 David Kwewum</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k aerial shot, above clouds, above the clouds</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/33083654/pexels-photo-33083654.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Brockville" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Brockville</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 JP</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Aerial view of Brockville's waterfront featuring marina, buildings, and lush greenery.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35237022/pexels-photo-35237022.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Pembroke" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Pembroke</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 David Kwewum</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k aerial shot, above clouds, above the clouds</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Petawawa" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Petawawa</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Smiths Falls" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Smiths Falls</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Carleton Place" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Carleton Place</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Arnprior" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Arnprior</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Renfrew" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Renfrew</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Perth" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Perth</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Almonte" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Almonte</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Hawkesbury" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Hawkesbury</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Alexandria" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Alexandria</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Casselman" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Casselman</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Rockland" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Rockland</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Prescott" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Prescott</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Gananoque" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Gananoque</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Napanee" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Napanee</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Trenton" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Trenton</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1653187011477-de4619ad48e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxTdCUyMExhd3JlbmNlJTIwUml2ZXIlMjBPbnRhcmlvJTIwYWVyaWFsfGVufDB8MHx8fDE3NjYyMTIwNzF8MA&ixlib=rb-4.1.0&q=80&w=200" alt="Picton" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Picton</div>
+            <div class="card-meta">eastern-ontario</div>
+            <div class="card-meta">📸 Alexander Schimmeck</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">body of water near trees and mountains during daytime</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/992987/pexels-photo-992987.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Greater Sudbury" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Greater Sudbury</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Scott Webb</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Futuristic and modern skyscrapers with curved designs in Mississauga, Ontario.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/11150530/pexels-photo-11150530.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Thunder Bay" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Thunder Bay</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Laura Stanley</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Detailed shot of a moored sailboat's deck and rigging in Thunder Bay harbor.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/6273549/pexels-photo-6273549.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Sault Ste. Marie" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Sault Ste. Marie</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Dave DiAngelo</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">A senior man inspects the engine of a classic red Datsun 240Z parked outdoors.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/2355305/pexels-photo-2355305.jpeg?auto=compress&cs=tinysrgb&h=130" alt="North Bay" class="card-image">
+          <div class="card-content">
+            <div class="card-title">North Bay</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Kelly</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Stunning aerial view of Chattanooga, TN with bridges and river at sunset.</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35237010/pexels-photo-35237010.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Timmins" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Timmins</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 David Kwewum</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k aerial shot, above clouds, above the clouds</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Temiskaming Shores" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Temiskaming Shores</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Kirkland Lake" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kirkland Lake</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Elliot Lake" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Elliot Lake</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Espanola" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Espanola</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Kapuskasing" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kapuskasing</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Cochrane" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Cochrane</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Iroquois Falls" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Iroquois Falls</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Chapleau" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Chapleau</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+        <div class="card  ">
+          <img src="https://images.pexels.com/photos/35199526/pexels-photo-35199526.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Kenora" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Kenora</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yaolong Hu</div>
+            <span class="badge badge-pexels">PEXELS</span>
+            
+            
+            <div class="card-description">Free stock photo of 4k landscape, 8k landscape</div>
+          </div>
+        </div>
+      
+        <div class="card  fallback">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDU5Nzh8MHwxfHNlYXJjaHwxfHxOb3J0aGVybiUyME9udGFyaW8lMjBib3JlYWwlMjBmb3Jlc3QlMjBhZXJpYWx8ZW58MHwwfHx8MTc2NjIxMjA3MXww&ixlib=rb-4.1.0&q=80&w=200" alt="Dryden" class="card-image">
+          <div class="card-content">
+            <div class="card-title">Dryden</div>
+            <div class="card-meta">northern-ontario</div>
+            <div class="card-meta">📸 Yuriy Garnaev</div>
+            <span class="badge badge-unsplash">UNSPLASH</span>
+            <span class="badge badge-fallback">REGIONAL FALLBACK</span>
+            
+            <div class="card-description">aerial photo of green trees</div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="footer">
+    <h3>✅ Next Steps</h3>
+    <p style="margin-top: 10px;">If ALL images are acceptable (NO religious imagery):</p>
+    <div>
+      <button class="approve-btn" onclick="alert('Run this command:\n\nnode scripts/download-images.mjs\n\nThis will download and process all 93 images.')">
+        APPROVE & PROCEED TO DOWNLOAD
+      </button>
+    </div>
+    <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+      If you see ANY religious imagery, edit <code>scripts/image-sources.json</code> to remove those entries before downloading.
+    </p>
+  </div>
+</body>
+</html>

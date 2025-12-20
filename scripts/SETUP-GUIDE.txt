@@ -1,0 +1,195 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║         STEWART SEAL COATING - IMAGE SOURCING SETUP GUIDE           ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+QUICK START - Follow these steps in order:
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 1: Get Free API Keys                                           │
+└──────────────────────────────────────────────────────────────────────┘
+
+A) UNSPLASH (Primary - Recommended):
+   1. Visit: https://unsplash.com/developers
+   2. Sign up or log in
+   3. Click "New Application"
+   4. Accept terms and create app
+   5. Copy your "Access Key" (starts with client ID)
+
+B) PEXELS (Backup - Optional but recommended):
+   1. Visit: https://www.pexels.com/api/
+   2. Sign up or log in  
+   3. Copy your API key from dashboard
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 2: Set Environment Variables (Windows PowerShell)              │
+└──────────────────────────────────────────────────────────────────────┘
+
+Open PowerShell in the project directory and run:
+
+   $env:UNSPLASH_ACCESS_KEY="paste_your_unsplash_key_here"
+   $env:PEXELS_API_KEY="paste_your_pexels_key_here"
+
+⚠️  IMPORTANT: Keep this PowerShell window open for all the following steps!
+   Environment variables only last for the current session.
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 3: Source Images (~10 minutes)                                 │
+└──────────────────────────────────────────────────────────────────────┘
+
+In the SAME PowerShell window, run:
+
+   node scripts/source-images.mjs
+
+What this does:
+   ✓ Searches Unsplash/Pexels for 5 regional + 87 city images
+   ✓ Filters out religious imagery automatically
+   ✓ Creates scripts/image-sources.json with all image URLs
+   ✓ Takes ~10 minutes due to API rate limiting
+
+You'll see progress for each region and city.
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 4: Generate Preview Page (~1 second)                           │
+└──────────────────────────────────────────────────────────────────────┘
+
+   node scripts/preview-images.mjs
+
+What this does:
+   ✓ Reads image-sources.json
+   ✓ Creates scripts/image-preview.html
+   ✓ Instant execution
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 5: MANUAL REVIEW (CRITICAL!)                                   │
+└──────────────────────────────────────────────────────────────────────┘
+
+   1. Open scripts/image-preview.html in your browser
+   2. Review EVERY image carefully
+   3. Look for ANY religious buildings or symbols:
+      ❌ Churches, cathedrals, mosques, synagogues, temples
+      ❌ Crosses, minarets, steeples, religious domes
+      ❌ Any identifiable faith architecture
+
+   WHY THIS MATTERS:
+   We serve ALL faith communities equally. Featuring one faith's
+   building in a hero image could alienate others, even if unintentional.
+
+   If you spot ANY religious imagery:
+   - Open scripts/image-sources.json in a text editor
+   - Remove the problematic entry
+   - Save the file
+   - Continue to Step 6
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 6: Download & Process Images (~5 minutes)                      │
+└──────────────────────────────────────────────────────────────────────┘
+
+After approving images in the preview:
+
+   node scripts/download-images.mjs
+
+What this does:
+   ✓ Downloads all approved images
+   ✓ Resizes to 1920x1080 (perfect 16:9 ratio)
+   ✓ Converts to WebP (85% quality, ~100-300KB each)
+   ✓ Adds dark gradient overlay for text legibility
+   ✓ Saves to /public/images/regions/ and /public/images/cities/
+   ✓ Takes ~5 minutes
+
+You'll see progress for each download and the final file sizes.
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 7: Test Locally                                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+   npm run dev
+
+Then visit:
+   http://localhost:3000/regions/southwestern-ontario
+   http://localhost:3000/locations/london-on
+   http://localhost:3000/regions/central-ontario
+
+Verify that hero images display correctly with text overlays.
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ STEP 8: Commit & Deploy                                             │
+└──────────────────────────────────────────────────────────────────────┘
+
+   git add public/images/regions public/images/cities
+   git add app/regions app/locations scripts
+   git commit -m "Add 92 hero images for regional and city pages"
+   git push origin main
+
+Vercel will auto-deploy. Check your production site in ~2 minutes.
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                          TROUBLESHOOTING                             ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+PROBLEM: "No API key found"
+SOLUTION: Make sure you set environment variables in the SAME PowerShell
+          session where you run the scripts.
+
+PROBLEM: "Rate limit exceeded"
+SOLUTION: Unsplash has 50 requests/hour limit. Wait an hour or use both
+          Unsplash + Pexels APIs together.
+
+PROBLEM: "No suitable images found" for many cities
+SOLUTION: This is normal. The script automatically uses regional fallback
+          images for cities where specific images aren't available.
+
+PROBLEM: Religious imagery in preview
+SOLUTION: Edit scripts/image-sources.json to remove those entries, then
+          run download-images.mjs again.
+
+PROBLEM: Images too large (>500KB)
+SOLUTION: This shouldn't happen with current settings. Check that WebP
+          conversion is working (files should end in .webp).
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                         LICENSING INFO                               ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+✓ All images from Unsplash and Pexels are FREE for commercial use
+✓ NO attribution required (but we track photographer names)
+✓ NO licensing fees, ever
+✓ Can modify, resize, add overlays
+✓ Perfect for business websites like yours
+
+See: https://unsplash.com/license and https://www.pexels.com/license
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                         FINAL CHECKLIST                              ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+[ ] Got Unsplash API key
+[ ] Got Pexels API key (optional but recommended)
+[ ] Set environment variables in PowerShell
+[ ] Ran source-images.mjs (created image-sources.json)
+[ ] Ran preview-images.mjs (created image-preview.html)
+[ ] Reviewed ALL images for religious content
+[ ] Removed any problematic images from image-sources.json
+[ ] Ran download-images.mjs (images in /public/images/)
+[ ] Tested locally with npm run dev
+[ ] All hero images display correctly
+[ ] Committed to Git
+[ ] Pushed to GitHub
+[ ] Verified production deployment
+
+DONE! 🎉
+
+Your website now has 92 professional hero images (5 regional + 87 city)
+that load fast, look great, and respect all faith communities equally.
+
