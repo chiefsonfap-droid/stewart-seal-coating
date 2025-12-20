@@ -50,33 +50,33 @@ export default function RegionPage({ params }: RegionPageProps) {
   const getRegionalOverview = () => {
     if (region.slug === "southwestern-ontario") {
       return {
-        intro: `Southwestern Ontario's agricultural heartland and growing urban centers present unique challenges for parking lot maintenance. This region experiences pronounced freeze-thaw cycles, with temperatures regularly crossing above and below freezing throughout late fall, winter, and early spring. Clay-heavy soils common to this area expand and contract with moisture changes, placing additional stress on asphalt foundations.`,
-        climate: `The region's climate is characterized by cold winters with significant snow accumulation, warm humid summers, and rapid temperature transitions in shoulder seasons. These conditions create an aggressive environment for asphalt: UV damage in summer, water infiltration in spring and fall, and freeze-thaw destruction in winter. Faith communities across Guelph, Cambridge, Brantford, Woodstock, and Stratford see this cycle damage parking lots year after year.`,
-        why: `For churches, synagogues, mosques, and temples in Southwestern Ontario, proactive maintenance isn't optional—it's the difference between a parking lot that lasts 20+ years and one that fails in 10. Board committees understand that preventative seal coating and crack repair cost pennies per square foot, while emergency resurfacing or replacement costs dollars per square foot. Our approach is built on this principle: repair before replacement, stewardship over shortcuts.`
+        condensed: `Southwestern Ontario's agricultural heartland experiences aggressive freeze-thaw cycles, with temperatures crossing above and below freezing throughout late fall, winter, and early spring. Clay-heavy soils common to this region expand and contract with moisture changes, placing additional stress on asphalt foundations. UV damage in summer, water infiltration in spring and fall, and freeze-thaw destruction in winter create an environment where parking lots deteriorate faster than other parts of Ontario.
+
+For faith communities across this region, proactive maintenance is the difference between a parking lot lasting 20+ years versus failing in 10. Preventative seal coating and crack repair cost pennies per square foot—emergency resurfacing costs dollars per square foot.`
       }
     } else if (region.slug === "central-ontario") {
       return {
-        intro: `Central Ontario sits at the intersection of cottage country, commuter towns, and established communities. From Barrie's lakeside setting to Peterborough's historic downtown, from Orillia's waterfront to the expansive Kawartha Lakes region, this area experiences significant temperature swings and lake-effect weather patterns that test parking lot durability.`,
-        climate: `The region's proximity to Lake Simcoe, the Kawartha Lakes, and Georgian Bay creates microclimates with enhanced snow accumulation, rapid temperature changes, and increased moisture exposure. Parking lots face seasonal stress from heavy snow loads in winter, aggressive UV exposure in summer, and constant moisture cycling. These conditions accelerate asphalt aging and require consistent maintenance to prevent catastrophic failure.`,
-        why: `Faith communities in Central Ontario—from Barrie's growing congregations to Peterborough's historic churches—face the challenge of maintaining aging infrastructure with limited budgets. Many parking lots in this region were paved decades ago and have received inconsistent maintenance. Our work focuses on extending the life of existing asphalt through strategic seal coating, comprehensive crack repair, and AODA-compliant markings that meet provincial accessibility standards.`
+        condensed: `Central Ontario's proximity to Lake Simcoe, the Kawartha Lakes, and Georgian Bay creates microclimates with enhanced snow accumulation, rapid temperature changes, and increased moisture exposure. Parking lots face seasonal stress from heavy snow loads in winter, aggressive UV exposure in summer, and constant moisture cycling that accelerates asphalt aging.
+
+Faith communities from Barrie to Peterborough face the challenge of maintaining aging infrastructure with limited budgets. Proactive seal coating, comprehensive crack repair, and AODA-compliant markings extend pavement life and prevent catastrophic failure that requires expensive replacement.`
       }
     } else if (region.slug === "golden-horseshoe-niagara") {
       return {
-        intro: `The Golden Horseshoe and Niagara region represents Ontario's most densely populated and economically vital corridor. From Burlington's lakeside affluence to Oakville's established neighborhoods, from St. Catharines' urban core to Niagara Falls' tourism infrastructure, this region experiences parking lot stress unlike anywhere else in the province.`,
-        climate: `High traffic volumes, salt damage from intensive winter road maintenance, and urban drainage challenges combine to create an aggressive environment for asphalt. The region's proximity to Lake Ontario moderates temperature extremes but increases moisture exposure. Salt runoff from roads and parking lots accelerates surface deterioration, while heavy usage from dense populations compounds wear patterns.`,
-        why: `Faith communities in the Golden Horseshoe serve diverse, multicultural populations and face unique pressures. Parking lots must accommodate weekend worship gatherings, mid-week programming, community events, and school activities. These high-usage patterns demand professional maintenance that goes beyond basic seal coating. Our approach includes comprehensive surface assessment, strategic crack repair, and durable line markings that withstand the region's demanding conditions.`
+        condensed: `The Golden Horseshoe experiences parking lot stress unlike anywhere else in Ontario. High traffic volumes, salt damage from intensive winter road maintenance, and urban drainage challenges combine to create an aggressive environment for asphalt. The region's proximity to Lake Ontario increases moisture exposure, while salt runoff accelerates surface deterioration and heavy usage compounds wear patterns.
+
+Faith communities serving diverse, multicultural populations face unique pressures. Parking lots must accommodate weekend worship, mid-week programming, community events, and school activities. These high-usage patterns demand professional maintenance with comprehensive surface assessment, strategic crack repair, and durable line markings.`
       }
     } else if (region.slug === "eastern-ontario") {
       return {
-        intro: `Eastern Ontario's historic corridor along the St. Lawrence River and Ottawa Valley combines heritage communities, military presence, and rural character. From Kingston's limestone architecture to Belleville's Bay of Quinte location, from Cornwall's riverfront setting to Brockville's Thousand Islands gateway, this region's parking lots face unique environmental stresses.`,
-        climate: `Lakefront and riverside locations mean increased moisture exposure, enhanced freeze-thaw cycles, and salt damage from winter road maintenance. The St. Lawrence River moderates temperature extremes but creates persistent humidity that accelerates asphalt aging. Winter brings reliable snow cover and sub-zero temperatures, while summer sun and UV exposure break down unprotected surfaces.`,
-        why: `Eastern Ontario's faith communities often occupy historic buildings with aging infrastructure. Churches established in the 1800s, synagogues serving generations of families, and newer mosques and temples all face the challenge of maintaining parking lots that serve contemporary needs while fitting limited maintenance budgets. Our work emphasizes long-term value: seal coating that extends surface life by years, crack repair that prevents water infiltration, and AODA markings that ensure accessibility for all community members.`
+        condensed: `Eastern Ontario's lakefront and riverside locations mean increased moisture exposure, enhanced freeze-thaw cycles, and salt damage from winter road maintenance. The St. Lawrence River creates persistent humidity that accelerates asphalt aging. Winter brings reliable snow cover and sub-zero temperatures, while summer sun and UV exposure break down unprotected surfaces.
+
+Eastern Ontario's faith communities often occupy historic buildings with aging infrastructure. Churches from the 1800s, synagogues serving generations of families, and newer mosques and temples all face maintaining parking lots that serve contemporary needs while fitting limited maintenance budgets.`
       }
     } else if (region.slug === "northern-ontario") {
       return {
-        intro: `Northern Ontario's vast geography, resource-based economy, and extreme climate create unique challenges for parking lot maintenance. From Greater Sudbury's mining heritage to North Bay's gateway location, from Sault Ste. Marie's border position to Thunder Bay's northwestern reach and Timmins' remote setting, this region tests asphalt like nowhere else in the province.`,
-        climate: `Extended winters with temperatures regularly reaching -30°C or colder, heavy snow accumulation, and severe temperature swings create the most aggressive environment for asphalt in Ontario. Spring thaw brings rapid temperature increases and heavy water infiltration. Short summers mean compressed maintenance windows. The freeze-thaw cycle here isn't measured in days—it's measured in hours as temperatures swing above and below freezing multiple times in a single week.`,
-        why: `Northern Ontario faith communities understand resilience. Congregations that maintain buildings through six-month winters know the value of proactive maintenance. But many contractors don't service this region, leaving communities with limited options and long wait times. We've built our service model specifically to serve Northern Ontario: regional route planning that brings us through reliably, products engineered for extreme temperatures, and realistic cure-time scheduling that accounts for weather unpredictability.`
+        condensed: `Northern Ontario's extended winters with temperatures regularly reaching -30°C or colder, heavy snow accumulation, and severe temperature swings create the most aggressive environment for asphalt in Ontario. Spring thaw brings rapid temperature increases and heavy water infiltration. Short summers mean compressed maintenance windows. The freeze-thaw cycle here isn't measured in days—it's measured in hours as temperatures swing above and below freezing multiple times in a single week.
+
+Northern Ontario faith communities understand resilience. Congregations maintaining buildings through six-month winters know the value of proactive maintenance. We've built our service model specifically for Northern Ontario: regional route planning, products engineered for extreme temperatures, and realistic cure-time scheduling.`
       }
     }
   }
@@ -85,7 +85,50 @@ export default function RegionPage({ params }: RegionPageProps) {
 
   // Regional FAQ questions
   const getRegionalFAQ = () => {
-    if (region.slug === "northern-ontario") {
+    if (region.slug === "southwestern-ontario") {
+      return [
+        {
+          q: "How often should Southwestern Ontario parking lots be seal coated?",
+          a: "Every 2-3 years for most faith communities. Southwestern Ontario's freeze-thaw cycles accelerate asphalt degradation, making regular maintenance critical. We inspect your lot during the free drone assessment and provide an honest recommendation—sometimes that means 'wait another year' if your lot is still in good condition."
+        },
+        {
+          q: "What's the best time of year for seal coating in Southwestern Ontario?",
+          a: "May through September, when overnight temperatures stay above 10°C (50°F) and rain isn't forecasted for 24-48 hours. We typically book Southwestern Ontario routes in late spring (May-June) and late summer (August-September) to avoid peak heat and ensure proper curing."
+        },
+        {
+          q: "Do you service all cities in Southwestern Ontario?",
+          a: "Yes. We serve London, Kitchener-Waterloo, Guelph, Cambridge, Brantford, and all surrounding communities from Lake Huron to Hamilton. Our hub-and-spoke routing model allows us to efficiently reach faith communities throughout the region."
+        },
+        {
+          q: "What makes Southwestern Ontario parking lots different?",
+          a: "Clay-heavy soils expand and contract with moisture, placing extra stress on asphalt foundations. Combined with pronounced freeze-thaw cycles, parking lots here experience faster deterioration than other parts of Ontario. Proactive maintenance is essential."
+        },
+        {
+          q: "Do you provide pricing over the phone?",
+          a: "We provide ballpark ranges after a free drone inspection. Every parking lot is different—size, condition, drainage issues, and required repairs all affect cost. Most Southwestern Ontario church lots (20-40 cars) range from $3,000-$7,000 depending on scope. We'll never surprise you with hidden costs."
+        },
+        {
+          q: "How long does the work take?",
+          a: "Most faith community parking lots take 1-2 days for seal coating, crack filling, and line striping. We coordinate around your worship schedule and mid-week programming. The seal coat cures in 24-48 hours, so we typically start work Monday or Tuesday to ensure lots are ready by Sunday."
+        },
+        {
+          q: "What documentation do you provide for board approval?",
+          a: "Every Southwestern Ontario project includes a Board Approval Kit: aerial photos, damage assessment, clear cost breakdown, timeline, WSIB Clearance Certificate, and technical specifications. Everything your board or committee needs to make an informed decision."
+        },
+        {
+          q: "Are you insured and licensed in Ontario?",
+          a: "Yes. We carry full commercial liability insurance and maintain WSIB compliance. Every contract includes a current WSIB Clearance Certificate naming your organization—your primary protection if a worker is injured on your property."
+        },
+        {
+          q: "Do you serve residential or commercial clients?",
+          a: "While faith communities are our priority, we serve residential driveways and small commercial properties in the same regions. If we're routing through your area for a church project, we're happy to add your property to the schedule."
+        },
+        {
+          q: "What's the '3-Year Stewardship Guarantee'?",
+          a: "We return to your facility for annual drone inspections in Years 1, 2, and 3. If we find any workmanship issues, we fix them free of charge. We also provide an updated condition report each year to help your board plan future maintenance budgets."
+        }
+      ]
+    } else if (region.slug === "northern-ontario") {
       return [
         {
           q: "Do you service remote communities in Northern Ontario?",
