@@ -175,9 +175,9 @@ export default function RegionPage({ params }: RegionPageProps) {
             </h2>
 
             <div className="prose prose-lg max-w-none space-y-6 text-neutral-700 leading-relaxed">
-              <p className="text-xl">{overview.intro}</p>
-              <p>{overview.climate}</p>
-              <p>{overview.why}</p>
+              <p className="text-xl">{overview?.intro}</p>
+              <p>{overview?.climate}</p>
+              <p>{overview?.why}</p>
             </div>
 
             {/* Climate Callout */}
