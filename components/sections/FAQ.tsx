@@ -27,6 +27,17 @@ export function FAQ() {
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="q1">
             <AccordionTrigger>
+              Do you serve all of Ontario?
+            </AccordionTrigger>
+            <AccordionContent>
+              We currently serve five major regions: Southwestern Ontario, Central Ontario, the Golden 
+              Horseshoe/Niagara, Eastern Ontario, and Northern Ontario. We group our projects into 
+              regional "routes" to keep our pricing fair and our service prompt.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q2">
+            <AccordionTrigger>
               Do you only serve Christian churches?
             </AccordionTrigger>
             <AccordionContent>
@@ -37,7 +48,19 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q2">
+          <AccordionItem value="q3">
+            <AccordionTrigger>
+              What's included in the Steward Protection Package™?
+            </AccordionTrigger>
+            <AccordionContent>
+              It's our "all-in-one" solution: professional seal coating, hot rubber crack filling, 
+              and AODA-compliant line striping. You also get our 3-Year Stewardship Guarantee 
+              (workmanship warranty + annual drone check-ins), an Aerial Damage Report, and a complete 
+              Board Approval Kit to make decision-making easy.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q4">
             <AccordionTrigger>
               How long does the seal coating take to cure?
             </AccordionTrigger>
@@ -48,7 +71,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q3">
+          <AccordionItem value="q5">
             <AccordionTrigger>
               What exactly is WSIB clearance and why is it mandatory?
             </AccordionTrigger>
@@ -61,7 +84,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q4">
+          <AccordionItem value="q6">
             <AccordionTrigger>
               Do you work weekends?
             </AccordionTrigger>
@@ -74,19 +97,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q5">
-            <AccordionTrigger>
-              What's included in the Steward Protection Package™?
-            </AccordionTrigger>
-            <AccordionContent>
-              It's our "all-in-one" solution: professional seal coating, hot rubber crack filling, 
-              and AODA-compliant line striping. You also get our 3-Year Stewardship Guarantee 
-              (workmanship warranty + annual drone check-ins), an Aerial Damage Report, and a complete 
-              Board Approval Kit to make decision-making easy.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="q6">
+          <AccordionItem value="q7">
             <AccordionTrigger>
               What is the difference between "seal coating" and "resurfacing"?
             </AccordionTrigger>
@@ -98,7 +109,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q7">
+          <AccordionItem value="q8">
             <AccordionTrigger>
               Can you service residential driveways or commercial lots?
             </AccordionTrigger>
@@ -110,7 +121,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q8">
+          <AccordionItem value="q9">
             <AccordionTrigger>
               What is the 3-Year Stewardship Guarantee™?
             </AccordionTrigger>
@@ -121,7 +132,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q9">
+          <AccordionItem value="q10">
             <AccordionTrigger>
               What happens during the "Free Drone Inspection"?
             </AccordionTrigger>
@@ -130,17 +141,6 @@ export function FAQ() {
               like ponding water or hidden drainage issues. You'll receive an Aerial Damage Report and 
               a Board Approval Kit with photos and a clear cost breakdown. It's a 100% free service to 
               help your committee make an informed decision.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="q10">
-            <AccordionTrigger>
-              Do you serve all of Ontario?
-            </AccordionTrigger>
-            <AccordionContent>
-              We currently serve five major regions: Southwestern Ontario, Central Ontario, the Golden 
-              Horseshoe/Niagara, Eastern Ontario, and Northern Ontario. We group our projects into 
-              regional "routes" to keep our pricing fair and our service prompt.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -12,10 +12,10 @@ export function ServicesOverview() {
         {/* Heading */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight">
-            Our Services
+            Service Details
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            Professional parking lot maintenance designed for faith community budgets and schedules
+            What each service includes in your Protection Package
           </p>
         </div>
 

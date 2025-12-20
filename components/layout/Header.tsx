@@ -30,7 +30,7 @@ export function Header() {
   const closeMenu = () => setIsOpen(false)
 
   const navLinks = [
-    { href: "/#services", label: "Services" },
+    { href: "/#package", label: "Services" },
     { href: "/#package", label: "Protection Package" },
     { href: "/#about", label: "About" },
     { href: "/#how-it-works", label: "How It Works" },
