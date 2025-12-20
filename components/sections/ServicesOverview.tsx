@@ -25,7 +25,7 @@ export function ServicesOverview() {
           <div className="bg-neutral-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-200">
             <div className="relative h-48">
               <Image
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80"
+                src="/images/service-seal-coating.webp"
                 alt="Asphalt seal coating service - Steward Seal Coating"
                 fill
                 className="object-cover"
@@ -52,7 +52,7 @@ export function ServicesOverview() {
           <div className="bg-neutral-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-200">
             <div className="relative h-48">
               <Image
-                src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80"
+                src="/images/service-crack-filling.webp"
                 alt="Hot rubber crack filling service - Steward Seal Coating"
                 fill
                 className="object-cover"
@@ -79,7 +79,7 @@ export function ServicesOverview() {
           <div className="bg-neutral-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-200">
             <div className="relative h-48">
               <Image
-                src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&q=80"
+                src="/images/service-line-striping.webp"
                 alt="AODA-compliant parking lot markings - Steward Seal Coating"
                 fill
                 className="object-cover"

@@ -12,7 +12,7 @@ export function AboutUs() {
           {/* Left Column - Image */}
           <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80"
+              src="/images/about-contractors-team.webp"
               alt="Steward Seal Coating team - Professional parking lot maintenance"
               fill
               className="object-cover"

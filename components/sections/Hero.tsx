@@ -72,7 +72,7 @@ export function Hero() {
           {/* Right Column - Image */}
           <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+              src="/images/hero-church-aerial.webp"
               alt="Church parking lot aerial view - Steward Seal Coating"
               fill
               className="object-cover"
