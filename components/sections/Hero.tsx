@@ -21,7 +21,7 @@ export function Hero() {
               </h1>
               <p className="text-xl text-neutral-700 leading-relaxed">
                 Protecting Ontario faith community parking lots—seal coating, crack repair, and 
-                accessible markings on your schedule, with no surprises.
+                accessible markings on your schedule, with no surprises. Residential and commercial properties also welcome.
               </p>
             </div>
 

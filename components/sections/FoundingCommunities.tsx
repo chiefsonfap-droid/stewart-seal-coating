@@ -42,7 +42,7 @@ export function FoundingCommunities() {
               {/* Heading */}
               <div className="text-center space-y-4">
                 <h2 className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight">
-                  Founding Communities Program
+                  First Season Introductory Program
                 </h2>
                 <div className="inline-block bg-accent-dark text-white px-6 py-2 rounded-full">
                   <p className="text-lg font-bold">
@@ -78,7 +78,7 @@ export function FoundingCommunities() {
                       Price Lock Guarantee
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      Protect your budget from future rate increases
+                      Lock in Year 1 pricing permanently. Once these spots are filled, pricing adjusts to market rates.
                     </p>
                   </div>
                 </div>
@@ -99,10 +99,10 @@ export function FoundingCommunities() {
                   <Award className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-lg mb-1 text-neutral-900">
-                      Founding Community Badge
+                      Direct Founder Access
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      Recognition for your website and newsletter
+                      Work directly with Paul and Andrew throughout your project
                     </p>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export function FoundingCommunities() {
                       Referral Rewards
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      $100 credit for every faith community you refer to us
+                      $500 credit for projects $8,000+, $250 credit for smaller projects—for every faith community you refer to us
                     </p>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export function FoundingCommunities() {
                   data-cta="founding-community"
                   data-location="founding-communities"
                 >
-                  <Link href="#contact">Become a Founding Community</Link>
+                  <Link href="#contact">Become an Early Partner</Link>
                 </Button>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Shield, Camera, FileText, Award } from "lucide-react"
+import { CheckCircle2, Shield, Camera, FileText, Award, Image as ImageIcon } from "lucide-react"
 
 /**
  * The Steward Protection Package™ Section
@@ -48,7 +48,9 @@ export function StewardPackage() {
                     <h4 className="font-bold text-lg mb-2">Asphalt Seal Coating</h4>
                     <p className="text-sm text-neutral-600 leading-relaxed">
                       Premium commercial-grade sealer that protects against UV damage, water penetration, 
-                      and freeze-thaw cycles.
+                      and freeze-thaw cycles. We use products that meet Canadian safety standards and are 
+                      safe for congregants, children, and parking lot users once cured (24-48 hours). 
+                      Material Safety Data Sheets (MSDS) provided for your records.
                     </p>
                   </div>
                 </div>
@@ -130,10 +132,11 @@ export function StewardPackage() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-2">Free Drone Assessment</h4>
+                    <h4 className="font-bold text-lg mb-2">Free Drone Assessment & Property Photography</h4>
                     <p className="text-sm text-neutral-600 leading-relaxed">
                       <span className="font-semibold text-accent">($350 value)</span> — Aerial inspection that reveals 
-                      hidden damage like ponding water and drainage issues invisible from the ground.
+                      hidden damage like ponding water and drainage issues invisible from the ground, PLUS professional 
+                      photos and video of your entire property for your marketing use.
                     </p>
                   </div>
                 </div>
@@ -148,13 +151,31 @@ export function StewardPackage() {
                   <div>
                     <h4 className="font-bold text-lg mb-2">Board Approval Kit</h4>
                     <p className="text-sm text-neutral-600 leading-relaxed">
-                      Complete documentation package including budget template, technical specifications, 
-                      sample proposal, aerial photos, cost breakdown, timeline, and WSIB certificate.
+                      Complete documentation package including Certificate of Insurance naming your organization, 
+                      WSIB Clearance Certificate, detailed proposal with technical specifications, aerial photos, 
+                      cost breakdown, timeline, and Material Safety Data Sheets (MSDS) for all products used.
                     </p>
                   </div>
                 </div>
 
                 {/* Bonus 3 */}
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <ImageIcon className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-2">Free Professional Property Photography</h4>
+                    <p className="text-sm text-neutral-600 leading-relaxed">
+                      During your complimentary drone assessment, we'll capture high-resolution aerial and ground 
+                      photos of your church property, buildings, and grounds. Use these professionally-shot images 
+                      for your website, newsletters, fundraising materials, or social media—at no additional cost.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bonus 4 */}
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">

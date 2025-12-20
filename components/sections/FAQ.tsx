@@ -50,6 +50,31 @@ export function FAQ() {
 
           <AccordionItem value="q3">
             <AccordionTrigger>
+              What insurance documentation do you provide?
+            </AccordionTrigger>
+            <AccordionContent>
+              We provide a complete Certificate of Insurance (COI) naming your church or organization as 
+              the certificate holder, along with our current WSIB Clearance Certificate. All documentation 
+              is included in your Board Approval Kit before work begins. This protects your organization 
+              from contractor liability.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q4">
+            <AccordionTrigger>
+              Are the materials you use safe for our congregation?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes. We use commercial-grade products that meet Canadian safety standards and WHMIS workplace 
+              safety requirements. All materials are safe once cured (24-48 hours) and suitable for 
+              facilities where children and families gather. We provide complete Material Safety Data 
+              Sheets (MSDS) for your records and are happy to discuss product specifications with your 
+              facilities committee.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q5">
+            <AccordionTrigger>
               What's included in the Steward Protection Package™?
             </AccordionTrigger>
             <AccordionContent>
@@ -60,7 +85,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q4">
+          <AccordionItem value="q6">
             <AccordionTrigger>
               How long does the seal coating take to cure?
             </AccordionTrigger>
@@ -71,7 +96,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q5">
+          <AccordionItem value="q7">
             <AccordionTrigger>
               What exactly is WSIB clearance and why is it mandatory?
             </AccordionTrigger>
@@ -84,7 +109,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q6">
+          <AccordionItem value="q8">
             <AccordionTrigger>
               Do you work weekends?
             </AccordionTrigger>
@@ -97,7 +122,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q7">
+          <AccordionItem value="q9">
             <AccordionTrigger>
               What is the difference between "seal coating" and "resurfacing"?
             </AccordionTrigger>
@@ -109,7 +134,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q8">
+          <AccordionItem value="q10">
             <AccordionTrigger>
               Can you service residential driveways or commercial lots?
             </AccordionTrigger>
@@ -121,7 +146,19 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q9">
+          <AccordionItem value="q11">
+            <AccordionTrigger>
+              Do you have a referral program?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes! When you refer another church or organization to us, you both save money. For 
+              projects $8,000 or more: $500 each. For projects under $8,000: $250 each. Choose cash 
+              payment or credit toward your next service (Years 3–5 when resealing is typically needed). 
+              No limit on referrals.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q12">
             <AccordionTrigger>
               What is the 3-Year Stewardship Guarantee™?
             </AccordionTrigger>
@@ -132,7 +169,7 @@ export function FAQ() {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="q10">
+          <AccordionItem value="q13">
             <AccordionTrigger>
               What happens during the "Free Drone Inspection"?
             </AccordionTrigger>

@@ -321,6 +321,17 @@ export default function CityPage({ params }: CityPageProps) {
               <p>
                 For residential driveways and commercial lots in {city.name}, we're happy to serve you—especially if you're in a neighborhood near one of our faith-based clients. By combining projects regionally, we keep our pricing competitive and our service prompt. But make no mistake: faith communities come first.
               </p>
+
+              {city.surroundingCommunities && (
+                <div className="bg-neutral-50 rounded-lg p-6 mt-6">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-3">
+                    Serving {city.name} and Surrounding Communities
+                  </h3>
+                  <p className="text-neutral-700 leading-relaxed">
+                    We serve {city.name} and surrounding {city.region} communities including {city.surroundingCommunities}, and all nearby rural congregations. Don't see your community listed? <Link href="#contact" className="text-primary font-semibold hover:underline">Contact us</Link> to confirm scheduling for your location.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

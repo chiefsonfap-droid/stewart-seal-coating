@@ -106,6 +106,9 @@ export function ContactForm({ program, page }: ContactFormProps) {
           <h3 className="text-3xl font-bold text-neutral-900">
             Get Your Free Drone Inspection
           </h3>
+          <p className="text-sm text-neutral-500 font-medium">
+            Faith communities, commercial properties, and residential driveways welcome
+          </p>
           <p className="text-neutral-600">
             Fill out the form below and we'll be in touch within 24 hours
           </p>
