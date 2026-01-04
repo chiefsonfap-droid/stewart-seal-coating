@@ -184,3 +184,7 @@ Currently the site has placeholder paths but no actual images. The site will bui
 ## Questions?
 Refer back to the master prompt specifications for image restrictions.
 
+
+
+
+

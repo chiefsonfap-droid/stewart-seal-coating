@@ -266,3 +266,7 @@ console.log('   2. Review EVERY image for religious imagery');
 console.log('   3. If you see ANY religious buildings/symbols, edit image-sources.json');
 console.log('   4. Once approved, run: node scripts/download-images.mjs');
 
+
+
+
+
