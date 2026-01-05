@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { REGIONS, CITIES } from '@/lib/constants'
+import { allPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://stewardsealcoating.ca'
@@ -19,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -31,6 +38,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ]
+  
+  // Service pages
+  const servicePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/services/seal-coating`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/crack-filling`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/line-striping`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/parking-lot-inspections`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+  ]
+  
+  // Blog posts
+  const blogPages: MetadataRoute.Sitemap = allPosts.map((post) => ({
+    url: `${baseUrl}/resources/${post.slug}`,
+    lastModified: new Date(post.datePublished),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
   
   // Regional pages
   const regionalPages: MetadataRoute.Sitemap = REGIONS.map((region) => ({
@@ -48,5 +91,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
   
-  return [...corePages, ...regionalPages, ...cityPages]
+  return [...corePages, ...servicePages, ...blogPages, ...regionalPages, ...cityPages]
 }

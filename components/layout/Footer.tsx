@@ -67,8 +67,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#how-it-works" className="hover:text-accent transition-colors">
-                  Free Drone Inspection
+                <Link href="/services/parking-lot-inspections" className="hover:text-accent transition-colors">
+                  Parking Lot Inspections
                 </Link>
               </li>
             </ul>
