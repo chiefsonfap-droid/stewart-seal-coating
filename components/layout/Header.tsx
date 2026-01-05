@@ -21,6 +21,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isServiceAreasOpen, setIsServiceAreasOpen] = React.useState(false)
   const [isServicesOpen, setIsServicesOpen] = React.useState(false)
+  const [isResourcesOpen, setIsResourcesOpen] = React.useState(false)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +34,6 @@ export function Header() {
   const closeMenu = () => setIsOpen(false)
 
   const navLinks = [
-    { href: "/resources", label: "Resources" },
     { href: "/#about", label: "About" },
   ]
 
@@ -42,6 +42,11 @@ export function Header() {
     { href: "/services/crack-filling", label: "Crack Filling" },
     { href: "/services/line-striping", label: "Line Striping" },
     { href: "/services/parking-lot-inspections", label: "Parking Lot Inspections" },
+  ]
+
+  const resourcePages = [
+    { href: "/resources", label: "Resources Overview" },
+    { href: "/faq", label: "FAQ" },
   ]
 
   return (
@@ -136,6 +141,36 @@ export function Header() {
               )}
             </div>
 
+            {/* Resources Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsResourcesOpen(true)}
+              onMouseLeave={() => setIsResourcesOpen(false)}
+            >
+              <button
+                className="text-neutral-700 hover:text-primary font-semibold text-base relative group transition-colors duration-200 flex items-center gap-1"
+              >
+                Resources
+                <ChevronDown className="h-4 w-4" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-200" />
+              </button>
+              
+              {/* Dropdown Menu */}
+              {isResourcesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-neutral-200 py-2 z-50">
+                  {resourcePages.map((page) => (
+                    <Link
+                      key={page.href}
+                      href={page.href}
+                      className="block px-4 py-3 text-neutral-700 hover:bg-primary/5 hover:text-primary transition-colors duration-150 text-sm font-medium"
+                    >
+                      {page.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -182,6 +217,21 @@ export function Header() {
                       className="block text-base font-medium text-neutral-700 hover:text-primary transition-colors py-2 pl-4"
                     >
                       {service.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Resources in Mobile Menu */}
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-neutral-500 uppercase tracking-wide">Resources</p>
+                  {resourcePages.map((page) => (
+                    <Link
+                      key={page.href}
+                      href={page.href}
+                      onClick={closeMenu}
+                      className="block text-base font-medium text-neutral-700 hover:text-primary transition-colors py-2 pl-4"
+                    >
+                      {page.label}
                     </Link>
                   ))}
                 </div>
