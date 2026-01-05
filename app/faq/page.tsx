@@ -1,5 +1,11 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Steward Seal Coating",
@@ -142,61 +148,73 @@ export default function FAQPage() {
               Services & Process
             </h2>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  What does seal coating actually do for asphalt parking lots?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Seal coating protects asphalt from water penetration, UV oxidation, road salt, and surface wear. It helps extend the life of a parking lot and improves appearance but does not fix structural damage.
-                </p>
-              </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="sp1">
+                <AccordionTrigger>
+                  <h3 className="text-left">What does seal coating actually do for asphalt parking lots?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Seal coating protects asphalt from water penetration, UV oxidation, road salt, and surface wear. It helps extend the life of a parking lot and improves appearance but does not fix structural damage.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  How long does seal coating last in Ontario's climate?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  In Ontario, seal coating typically lasts 2–3 years, depending on traffic levels, sun exposure, and whether cracks are properly maintained.
-                </p>
-              </div>
+              <AccordionItem value="sp2">
+                <AccordionTrigger>
+                  <h3 className="text-left">How long does seal coating last in Ontario's climate?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    In Ontario, seal coating typically lasts 2–3 years, depending on traffic levels, sun exposure, and whether cracks are properly maintained.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  Why is crack repair important for parking lots in Ontario?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Crack repair prevents water from entering the asphalt, where freeze-thaw cycles can cause rapid expansion and structural damage.
-                </p>
-              </div>
+              <AccordionItem value="sp3">
+                <AccordionTrigger>
+                  <h3 className="text-left">Why is crack repair important for parking lots in Ontario?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Crack repair prevents water from entering the asphalt, where freeze-thaw cycles can cause rapid expansion and structural damage.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  When is the best time of year for asphalt crack repair?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Crack repair is most effective from late spring through early fall, when temperatures allow repair materials to properly bond.
-                </p>
-              </div>
+              <AccordionItem value="sp4">
+                <AccordionTrigger>
+                  <h3 className="text-left">When is the best time of year for asphalt crack repair?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Crack repair is most effective from late spring through early fall, when temperatures allow repair materials to properly bond.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  Do churches need AODA-compliant parking lot striping in Ontario?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Most churches in Ontario are required to comply with AODA standards when providing parking for the public, including proper accessible spaces and signage.
-                </p>
-              </div>
+              <AccordionItem value="sp5">
+                <AccordionTrigger>
+                  <h3 className="text-left">Do churches need AODA-compliant parking lot striping in Ontario?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Most churches in Ontario are required to comply with AODA standards when providing parking for the public, including proper accessible spaces and signage.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  What makes line striping AODA-compliant?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  AODA-compliant striping includes correct space dimensions, access aisles, high-contrast pavement markings, and required vertical signage.
-                </p>
-              </div>
-            </div>
+              <AccordionItem value="sp6">
+                <AccordionTrigger>
+                  <h3 className="text-left">What makes line striping AODA-compliant?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    AODA-compliant striping includes correct space dimensions, access aisles, high-contrast pavement markings, and required vertical signage.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* Pricing & Steward Protection Package */}
@@ -205,42 +223,48 @@ export default function FAQPage() {
               Pricing & Steward Protection Package™
             </h2>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  What's included in the Steward Protection Package™?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed mb-3">
-                  The package includes:
-                </p>
-                <ul className="list-disc pl-6 text-neutral-700 leading-relaxed space-y-2">
-                  <li>Two-coat seal coating application</li>
-                  <li>Hot rubber crack filling (all cracks ¼" or wider)</li>
-                  <li>AODA-compliant line striping</li>
-                  <li>Free drone inspection with professional property photos ($350 value)</li>
-                  <li>3-Year Stewardship Guarantee</li>
-                  <li>Priority scheduling for Founding Communities</li>
-                </ul>
-              </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="pp1">
+                <AccordionTrigger>
+                  <h3 className="text-left">What's included in the Steward Protection Package™?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed mb-3">
+                    The package includes:
+                  </p>
+                  <ul className="list-disc pl-6 text-neutral-700 leading-relaxed space-y-2">
+                    <li>Two-coat seal coating application</li>
+                    <li>Hot rubber crack filling (all cracks ¼" or wider)</li>
+                    <li>AODA-compliant line striping</li>
+                    <li>Free drone inspection with professional property photos ($350 value)</li>
+                    <li>3-Year Stewardship Guarantee</li>
+                    <li>Priority scheduling for Founding Communities</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  Is there a Founding Communities program?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Yes! The first 50 faith communities receive a 5-year price lock (with 3% annual cap after), priority scheduling, higher referral bonuses ($600/$300 vs $400/$200), and $1,000 milestone bonuses every 5 referrals. Currently 12 spots remaining.
-                </p>
-              </div>
+              <AccordionItem value="pp2">
+                <AccordionTrigger>
+                  <h3 className="text-left">Is there a Founding Communities program?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Yes! The first 50 faith communities receive a 5-year price lock (with 3% annual cap after), priority scheduling, higher referral bonuses ($600/$300 vs $400/$200), and $1,000 milestone bonuses every 5 referrals. Currently 12 spots remaining.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  Do you have a referral program?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Yes! Standard clients earn $400 for referring projects over $5,000 ($200 for smaller projects). Founding Communities earn $600 for projects over $5,000 ($300 for smaller), plus $1,000 milestone bonuses every 5 referrals. The referred community gets $100 off their first project. Credits can be used for future services or donated to your building fund.
-                </p>
-              </div>
-            </div>
+              <AccordionItem value="pp3">
+                <AccordionTrigger>
+                  <h3 className="text-left">Do you have a referral program?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Yes! Standard clients earn $400 for referring projects over $5,000 ($200 for smaller projects). Founding Communities earn $600 for projects over $5,000 ($300 for smaller), plus $1,000 milestone bonuses every 5 referrals. The referred community gets $100 off their first project. Credits can be used for future services or donated to your building fund.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* Scheduling, Seasons & Disruption */}
@@ -249,34 +273,40 @@ export default function FAQPage() {
               Scheduling, Seasons & Disruption
             </h2>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  How long does a seal coating project take to complete?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Most church and commercial parking lots can be seal coated in one day, with 24–48 hours required for curing before vehicle traffic resumes.
-                </p>
-              </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="ss1">
+                <AccordionTrigger>
+                  <h3 className="text-left">How long does a seal coating project take to complete?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Most church and commercial parking lots can be seal coated in one day, with 24–48 hours required for curing before vehicle traffic resumes.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  Can seal coating be scheduled around church services?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  Yes. Seal coating is commonly scheduled mid-week to avoid weekends, worship services, and special events, minimizing disruption.
-                </p>
-              </div>
+              <AccordionItem value="ss2">
+                <AccordionTrigger>
+                  <h3 className="text-left">Can seal coating be scheduled around church services?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Yes. Seal coating is commonly scheduled mid-week to avoid weekends, worship services, and special events, minimizing disruption.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  When is the best time to seal coat in Ontario?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  The best time to seal coat in Ontario is typically between June and August, when temperatures are consistently above 10°C and rainfall risk is lower. These conditions allow proper curing and longer-lasting protection.
-                </p>
-              </div>
-            </div>
+              <AccordionItem value="ss3">
+                <AccordionTrigger>
+                  <h3 className="text-left">When is the best time to seal coat in Ontario?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    The best time to seal coat in Ontario is typically between June and August, when temperatures are consistently above 10°C and rainfall risk is lower. These conditions allow proper curing and longer-lasting protection.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
           {/* Warranty & Guarantees */}
@@ -285,25 +315,29 @@ export default function FAQPage() {
               Warranty & Guarantees
             </h2>
             
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  What exactly does 'workmanship warranty' mean?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  We guarantee that our seal coating, crack filling, and line striping will perform as expected for 3 years. If our work fails prematurely due to application issues, we'll redo it at no charge. What we DON'T guarantee is that your asphalt won't develop new problems from weather, traffic, or age—because no contractor can control Ontario's freeze-thaw cycles.
-                </p>
-              </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="wg1">
+                <AccordionTrigger>
+                  <h3 className="text-left">What exactly does 'workmanship warranty' mean?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    We guarantee that our seal coating, crack filling, and line striping will perform as expected for 3 years. If our work fails prematurely due to application issues, we'll redo it at no charge. What we DON'T guarantee is that your asphalt won't develop new problems from weather, traffic, or age—because no contractor can control Ontario's freeze-thaw cycles.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">
-                  What if cracks re-open after filling?
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  If a crack re-opens in the exact same spot we filled, that's covered by our workmanship warranty and we'll repair it. If NEW cracks form in different areas (common as asphalt ages), those would be quoted separately. Our annual drone inspections catch new cracks early when they're cheapest to fix.
-                </p>
-              </div>
-            </div>
+              <AccordionItem value="wg2">
+                <AccordionTrigger>
+                  <h3 className="text-left">What if cracks re-open after filling?</h3>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-neutral-700 leading-relaxed">
+                    If a crack re-opens in the exact same spot we filled, that's covered by our workmanship warranty and we'll repair it. If NEW cracks form in different areas (common as asphalt ages), those would be quoted separately. Our annual drone inspections catch new cracks early when they're cheapest to fix.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
 
         </div>
