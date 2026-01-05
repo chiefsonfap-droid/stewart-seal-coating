@@ -47,7 +47,7 @@ export function Footer() {
             <h3 className="text-white font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/#package" className="hover:text-accent transition-colors">
+                <Link href="/" className="hover:text-accent transition-colors">
                   Steward Protection Package™
                 </Link>
               </li>

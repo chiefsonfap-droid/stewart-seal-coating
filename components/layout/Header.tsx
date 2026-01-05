@@ -19,7 +19,8 @@ import { REGIONS, CONTACT } from "@/lib/constants"
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false)
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
+  const [isServiceAreasOpen, setIsServiceAreasOpen] = React.useState(false)
+  const [isServicesOpen, setIsServicesOpen] = React.useState(false)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -32,11 +33,17 @@ export function Header() {
   const closeMenu = () => setIsOpen(false)
 
   const navLinks = [
-    { href: "/#package", label: "Services" },
     { href: "/resources", label: "Resources" },
     { href: "/#about", label: "About" },
     { href: "/#faq", label: "FAQ" },
     { href: "/#contact", label: "Contact" },
+  ]
+
+  const servicePages = [
+    { href: "/services/seal-coating", label: "Seal Coating" },
+    { href: "/services/crack-filling", label: "Crack Filling" },
+    { href: "/services/line-striping", label: "Line Striping" },
+    { href: "/services/parking-lot-inspections", label: "Parking Lot Inspections" },
   ]
 
   return (
@@ -65,22 +72,41 @@ export function Header() {
               <span className="text-base">{CONTACT.phone}</span>
             </a>
 
-            {navLinks.slice(0, 1).map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-neutral-700 hover:text-primary font-semibold text-base relative group transition-colors duration-200"
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                className="text-neutral-700 hover:text-primary font-semibold text-base relative group transition-colors duration-200 flex items-center gap-1"
               >
-                {link.label}
+                Services
+                <ChevronDown className="h-4 w-4" />
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-200" />
-              </Link>
-            ))}
+              </button>
+              
+              {/* Dropdown Menu */}
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-neutral-200 py-2 z-50">
+                  {servicePages.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-3 text-neutral-700 hover:bg-primary/5 hover:text-primary transition-colors duration-150 text-sm font-medium"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             
             {/* Service Areas Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              onMouseEnter={() => setIsServiceAreasOpen(true)}
+              onMouseLeave={() => setIsServiceAreasOpen(false)}
             >
               <button
                 className="text-neutral-700 hover:text-primary font-semibold text-base relative group transition-colors duration-200 flex items-center gap-1"
@@ -91,7 +117,7 @@ export function Header() {
               </button>
               
               {/* Dropdown Menu */}
-              {isDropdownOpen && (
+              {isServiceAreasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-neutral-200 py-2 z-50">
                   <Link
                     href="/service-areas"
@@ -112,7 +138,7 @@ export function Header() {
               )}
             </div>
 
-            {navLinks.slice(1).map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -146,6 +172,21 @@ export function Header() {
                   <Phone className="h-5 w-5" />
                   {CONTACT.phone}
                 </a>
+
+                {/* Services in Mobile Menu */}
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-neutral-500 uppercase tracking-wide">Services</p>
+                  {servicePages.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      onClick={closeMenu}
+                      className="block text-base font-medium text-neutral-700 hover:text-primary transition-colors py-2 pl-4"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
 
                 {navLinks.map((link) => (
                   <Link
