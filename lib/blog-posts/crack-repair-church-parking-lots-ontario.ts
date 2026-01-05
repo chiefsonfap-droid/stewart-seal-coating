@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 7,
   datePublished: "2025-12-31",
   category: "Asphalt Repair & Longevity",
+  faqs: [
+    {
+      question: "Why is crack repair important in Ontario?",
+      answer: "Crack repair prevents water from entering the asphalt, where freeze-thaw cycles can cause rapid structural damage."
+    },
+    {
+      question: "When is the best time for asphalt crack repair?",
+      answer: "Crack repair is most effective from late spring through early fall, when temperatures allow materials to properly bond."
+    },
+    {
+      question: "Can crack repair extend the life of a parking lot?",
+      answer: "Yes. Timely crack repair can significantly delay the need for resurfacing and improve the effectiveness of seal coating."
+    }
+  ],
   content: `
 <p>Cracks may seem minor—but in Ontario's climate, they're the fastest way for asphalt to fail. <strong>Crack repair is one of the most cost-effective maintenance steps churches can take.</strong></p>
 

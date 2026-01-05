@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 8,
   datePublished: "2026-01-01",
   category: "Budgeting & Stewardship",
+  faqs: [
+    {
+      question: "What is the difference between seal coating and resurfacing?",
+      answer: "Seal coating protects existing asphalt from moisture and oxidation, while resurfacing adds a new asphalt layer to address widespread structural damage."
+    },
+    {
+      question: "Is seal coating always cheaper than resurfacing?",
+      answer: "Yes. Seal coating is significantly more affordable and is intended as preventative maintenance, while resurfacing is a major capital expense."
+    },
+    {
+      question: "How do churches know which option they need?",
+      answer: "A professional parking lot inspection can determine whether the asphalt is structurally sound enough for seal coating or requires resurfacing."
+    }
+  ],
   content: `
 <p>Church boards often face a difficult question: Do we seal coat—or do we resurface? Understanding the difference is critical for responsible budgeting and stewardship.</p>
 

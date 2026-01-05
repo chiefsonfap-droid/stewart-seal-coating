@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 8,
   datePublished: "2025-12-30",
   category: "Maintenance Planning",
+  faqs: [
+    {
+      question: "Why are spring parking lot inspections important for churches?",
+      answer: "Spring inspections reveal damage caused by winter freeze-thaw cycles, allowing repairs to be planned before issues worsen."
+    },
+    {
+      question: "What should churches look for during a spring inspection?",
+      answer: "Common issues include new cracks, potholes, drainage problems, and faded line striping."
+    },
+    {
+      question: "Do large church campuses benefit from professional inspections?",
+      answer: "Yes. Larger properties often benefit from professional or aerial inspections to ensure no issues are missed."
+    }
+  ],
   content: `
 <p>Spring is the most important inspection season for Ontario churches. Winter damage becomes visible, and early action can prevent costly repairs.</p>
 

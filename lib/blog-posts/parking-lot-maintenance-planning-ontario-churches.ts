@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 9,
   datePublished: "2025-12-29",
   category: "Budgeting & Stewardship",
+  faqs: [
+    {
+      question: "Why should churches create a long-term parking lot maintenance plan?",
+      answer: "Long-term planning helps churches control costs, reduce emergency repairs, and align maintenance with budget and stewardship goals."
+    },
+    {
+      question: "What does a typical 5-year parking lot maintenance plan include?",
+      answer: "A plan often includes inspections, crack repair, seal coating cycles, and regular condition monitoring."
+    },
+    {
+      question: "Does preventative maintenance really save money?",
+      answer: "Yes. Preventative maintenance is far less expensive than major repairs or resurfacing caused by neglect."
+    }
+  ],
   content: `
 <p>Reactive repairs strain church budgets. A 3–5 year maintenance plan aligns asphalt care with stewardship principles and long-term financial health.</p>
 

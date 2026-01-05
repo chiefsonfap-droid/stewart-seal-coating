@@ -13,6 +13,24 @@ export const post: BlogPost = {
   readingTimeMinutes: 8,
   datePublished: "2026-01-05",
   category: "Seasonal Guidance",
+  faqs: [
+    {
+      question: "When is the best time to seal coat a parking lot in Ontario?",
+      answer: "The best time to seal coat in Ontario is typically between June and August, when temperatures are consistently above 10°C and rainfall risk is lower. These conditions allow proper curing and longer-lasting protection."
+    },
+    {
+      question: "Can seal coating be done in spring or fall in Ontario?",
+      answer: "Seal coating can sometimes be done in late spring or early fall, but temperature fluctuations and moisture increase the risk of poor curing. Summer remains the most reliable season."
+    },
+    {
+      question: "How long does seal coating need to cure before parking is allowed?",
+      answer: "Most seal coating projects require 24–48 hours of restricted vehicle access, depending on weather conditions, shade, and lot size."
+    },
+    {
+      question: "Should churches avoid seal coating during weekends?",
+      answer: "Yes. Churches typically benefit from mid-week scheduling to avoid disrupting worship services, funerals, weddings, and community events."
+    }
+  ],
   content: `
 <p>For churches and faith communities across Ontario, parking lots are more than pavement. They're part of hospitality, safety, and stewardship. Knowing <strong>when to seal coat in Ontario</strong> can mean the difference between extending your asphalt's life—or watching it deteriorate prematurely.</p>
 

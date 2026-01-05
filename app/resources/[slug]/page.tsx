@@ -84,6 +84,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "keywords": [post.primaryKeyword, ...post.secondaryKeywords].join(", ")
   }
 
+  // Generate FAQPage schema
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
   // Process content to add internal links
   let processedContent = post.content
   
@@ -100,10 +114,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
-      {/* JSON-LD Schema */}
+      {/* JSON-LD Schemas */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
 
       {/* Breadcrumb */}
@@ -164,6 +182,27 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             "
             dangerouslySetInnerHTML={{ __html: processedContent }}
           />
+
+          {/* FAQ Section */}
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="mt-16 border-t border-neutral-200 pt-12">
+              <h2 className="text-3xl font-black text-neutral-900 mb-8">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-8">
+                {post.faqs.map((faq, index) => (
+                  <div key={index} className="space-y-3">
+                    <h3 className="text-xl font-bold text-neutral-900">
+                      {faq.question}
+                    </h3>
+                    <p className="text-neutral-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* CTA Section */}
           <div className="mt-16 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border-l-4 border-primary">

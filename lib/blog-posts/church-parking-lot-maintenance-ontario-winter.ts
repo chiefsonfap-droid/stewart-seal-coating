@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 8,
   datePublished: "2026-01-03",
   category: "Seasonal Guidance",
+  faqs: [
+    {
+      question: "Why are Ontario winters so damaging to parking lots?",
+      answer: "Freeze-thaw cycles cause water in small cracks to expand, breaking asphalt apart from the inside and leading to rapid deterioration."
+    },
+    {
+      question: "Should churches seal coat before winter?",
+      answer: "Seal coating should be completed well before winter if temperatures allow. Otherwise, crack repair and inspections are better fall priorities."
+    },
+    {
+      question: "Can snow plowing damage asphalt parking lots?",
+      answer: "Yes. Metal plow blades and improper techniques can scrape asphalt surfaces, especially if cracks or weak areas already exist."
+    }
+  ],
   content: `
 <p>Ontario winters are tough on asphalt—especially for church parking lots that sit unused during the week and see heavy traffic on weekends. Without proper preparation, freeze-thaw damage can shorten the life of your pavement and create safety risks.</p>
 

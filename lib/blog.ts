@@ -4,6 +4,11 @@
  * Each post is a TypeScript module with metadata and content
  */
 
+export interface FAQ {
+  question: string
+  answer: string
+}
+
 export interface BlogPost {
   title: string
   slug: string
@@ -14,6 +19,7 @@ export interface BlogPost {
   datePublished: string
   category: string
   content: string
+  faqs: FAQ[]
 }
 
 export const BLOG_CATEGORIES = [

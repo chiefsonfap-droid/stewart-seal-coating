@@ -13,6 +13,20 @@ export const post: BlogPost = {
   readingTimeMinutes: 7,
   datePublished: "2026-01-04",
   category: "Maintenance Planning",
+  faqs: [
+    {
+      question: "How often should church parking lots be seal coated in Ontario?",
+      answer: "Most church parking lots in Ontario should be seal coated every 2–3 years, depending on traffic levels, sun exposure, and how well cracks are maintained."
+    },
+    {
+      question: "What happens if seal coating is delayed too long?",
+      answer: "Delaying seal coating allows water and salt to penetrate the asphalt, accelerating cracking and potentially leading to costly resurfacing instead of affordable maintenance."
+    },
+    {
+      question: "Does crack repair affect how often seal coating is needed?",
+      answer: "Yes. Regular crack repair helps preserve the asphalt base and can extend the effective lifespan of seal coating."
+    }
+  ],
   content: `
 <p>One of the most common questions church facility managers ask is: <strong>How often should we seal coat our parking lot?</strong> The answer depends on traffic, weather exposure, and how proactively the asphalt has been maintained.</p>
 

@@ -34,8 +34,54 @@ export const metadata: Metadata = {
 }
 
 export default function SealCoatingPage() {
+  // Generate FAQPage schema
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does seal coating actually do for asphalt parking lots?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seal coating protects asphalt from water penetration, UV oxidation, road salt, and surface wear. It helps extend the life of a parking lot and improves appearance but does not fix structural damage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does seal coating last in Ontario's climate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Ontario, seal coating typically lasts 2–3 years, depending on traffic levels, sun exposure, and whether cracks are properly maintained."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a seal coating project take to complete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most church and commercial parking lots can be seal coated in one day, with 24–48 hours required for curing before vehicle traffic resumes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can seal coating be done around church schedules and services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Seal coating is commonly scheduled mid-week to avoid weekends, worship services, and special events, minimizing disruption."
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-dark to-primary py-20 md:py-32 text-white">
         <div className="absolute inset-0 z-0">
@@ -274,10 +320,53 @@ export default function SealCoatingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-black text-neutral-900 text-center">
-              Seal Coating Questions
+              Frequently Asked Questions
             </h2>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <div className="space-y-8">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  What does seal coating actually do for asphalt parking lots?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Seal coating protects asphalt from water penetration, UV oxidation, road salt, and surface wear. It helps extend the life of a parking lot and improves appearance but does not fix structural damage.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  How long does seal coating last in Ontario's climate?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  In Ontario, seal coating typically lasts 2–3 years, depending on traffic levels, sun exposure, and whether cracks are properly maintained.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  How long does a seal coating project take to complete?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Most church and commercial parking lots can be seal coated in one day, with 24–48 hours required for curing before vehicle traffic resumes.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Can seal coating be done around church schedules and services?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Yes. Seal coating is commonly scheduled mid-week to avoid weekends, worship services, and special events, minimizing disruption.
+                </p>
+              </div>
+            </div>
+
+            {/* Keep existing detailed FAQs in Accordion below global FAQs */}
+            <div className="mt-12 pt-12 border-t border-neutral-200">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+                Additional Technical Questions
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="q1">
                 <AccordionTrigger>
                   How often should Ontario parking lots be seal coated?
@@ -332,6 +421,7 @@ export default function SealCoatingPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            </div>
           </div>
         </div>
       </section>

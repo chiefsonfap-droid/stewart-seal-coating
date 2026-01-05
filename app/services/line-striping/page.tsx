@@ -34,8 +34,54 @@ export const metadata: Metadata = {
 }
 
 export default function LineStripingPage() {
+  // Generate FAQPage schema
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How often should parking lot line striping be refreshed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Line striping is typically refreshed every 1–2 years, or whenever markings fade, layouts change, or seal coating is applied."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do churches need AODA-compliant parking lot striping in Ontario?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most churches in Ontario are required to comply with AODA standards when providing parking for the public, including proper accessible spaces and signage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes line striping AODA-compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AODA-compliant striping includes correct space dimensions, access aisles, high-contrast pavement markings, and required vertical signage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is line striping affected by Ontario winters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Snowplowing, road salt, and freeze-thaw cycles can wear down markings, making periodic restriping necessary for visibility and safety."
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-dark to-primary py-20 md:py-32 text-white">
         <div className="absolute inset-0 z-0">
@@ -349,10 +395,53 @@ export default function LineStripingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-black text-neutral-900 text-center">
-              Line Striping Questions
+              Frequently Asked Questions
             </h2>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <div className="space-y-8">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  How often should parking lot line striping be refreshed?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Line striping is typically refreshed every 1–2 years, or whenever markings fade, layouts change, or seal coating is applied.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Do churches need AODA-compliant parking lot striping in Ontario?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Most churches in Ontario are required to comply with AODA standards when providing parking for the public, including proper accessible spaces and signage.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  What makes line striping AODA-compliant?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  AODA-compliant striping includes correct space dimensions, access aisles, high-contrast pavement markings, and required vertical signage.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Is line striping affected by Ontario winters?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Yes. Snowplowing, road salt, and freeze-thaw cycles can wear down markings, making periodic restriping necessary for visibility and safety.
+                </p>
+              </div>
+            </div>
+
+            {/* Keep existing detailed FAQs in Accordion below global FAQs */}
+            <div className="mt-12 pt-12 border-t border-neutral-200">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+                Additional Technical Questions
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="q1">
                 <AccordionTrigger>
                   How many accessible parking spaces do we need?
@@ -407,6 +496,7 @@ export default function LineStripingPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            </div>
           </div>
         </div>
       </section>

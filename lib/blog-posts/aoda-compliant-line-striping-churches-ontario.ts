@@ -13,6 +13,24 @@ export const post: BlogPost = {
   readingTimeMinutes: 9,
   datePublished: "2026-01-02",
   category: "Compliance & Accessibility",
+  faqs: [
+    {
+      question: "Do churches in Ontario need to comply with AODA parking requirements?",
+      answer: "Yes. Most churches are required to comply with AODA standards for accessible parking when providing services or facilities to the public."
+    },
+    {
+      question: "How many accessible parking spaces does a church need?",
+      answer: "The number of required accessible spaces depends on the total number of parking spaces in the lot, as outlined in Ontario regulations."
+    },
+    {
+      question: "Is painted pavement marking enough for accessible parking?",
+      answer: "No. AODA requires proper surface markings and vertical signage to clearly designate accessible parking spaces."
+    },
+    {
+      question: "When should accessible parking line striping be refreshed?",
+      answer: "Striping should be refreshed after seal coating, when markings fade, or when accessibility layouts are updated."
+    }
+  ],
   content: `
 <p>Accessibility isn't optional in Ontario. Under the Accessibility for Ontarians with Disabilities Act (AODA), churches and faith-based organizations must ensure their parking facilities are accessible to all.</p>
 

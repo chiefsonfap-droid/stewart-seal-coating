@@ -34,8 +34,54 @@ export const metadata: Metadata = {
 }
 
 export default function CrackFillingPage() {
+  // Generate FAQPage schema
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is crack repair important for parking lots in Ontario?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crack repair prevents water from entering the asphalt, where freeze-thaw cycles can cause rapid expansion and structural damage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the best time of year for asphalt crack repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crack repair is most effective from late spring through early fall, when temperatures allow repair materials to properly bond."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does crack repair extend the life of seal coating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sealing cracks before seal coating helps prevent premature failure and significantly improves the effectiveness of the seal coat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are small cracks really a concern?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Even small cracks can allow moisture into the asphalt base, leading to larger cracks, potholes, and more costly repairs if left untreated."
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-dark to-primary py-20 md:py-32 text-white">
         <div className="absolute inset-0 z-0">
@@ -326,10 +372,53 @@ export default function CrackFillingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-black text-neutral-900 text-center">
-              Crack Filling Questions
+              Frequently Asked Questions
             </h2>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <div className="space-y-8">
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Why is crack repair important for parking lots in Ontario?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Crack repair prevents water from entering the asphalt, where freeze-thaw cycles can cause rapid expansion and structural damage.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  When is the best time of year for asphalt crack repair?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Crack repair is most effective from late spring through early fall, when temperatures allow repair materials to properly bond.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Does crack repair extend the life of seal coating?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Yes. Sealing cracks before seal coating helps prevent premature failure and significantly improves the effectiveness of the seal coat.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-neutral-900">
+                  Are small cracks really a concern?
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  Yes. Even small cracks can allow moisture into the asphalt base, leading to larger cracks, potholes, and more costly repairs if left untreated.
+                </p>
+              </div>
+            </div>
+
+            {/* Keep existing detailed FAQs in Accordion below global FAQs */}
+            <div className="mt-12 pt-12 border-t border-neutral-200">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+                Additional Technical Questions
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="q1">
                 <AccordionTrigger>
                   How do I know if cracks need filling?
@@ -384,6 +473,7 @@ export default function CrackFillingPage() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            </div>
           </div>
         </div>
       </section>
