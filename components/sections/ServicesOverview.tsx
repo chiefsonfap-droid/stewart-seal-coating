@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { Droplets, Wrench, PenTool } from "lucide-react"
+import Link from "next/link"
+import { Droplets, Wrench, PenTool, ArrowRight } from "lucide-react"
 
 /**
  * Services Overview Section
@@ -45,6 +46,12 @@ export function ServicesOverview() {
               <div className="pt-2 text-sm text-neutral-600">
                 <p className="font-semibold">Preventative maintenance at pennies per square foot—far less than resurfacing.</p>
               </div>
+              <Link 
+                href="/services/seal-coating"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors pt-2"
+              >
+                Learn More <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
@@ -72,6 +79,12 @@ export function ServicesOverview() {
               <div className="pt-2 text-sm text-neutral-600">
                 <p className="font-semibold">Repair before replacement—the stewardship approach to budget management.</p>
               </div>
+              <Link 
+                href="/services/crack-filling"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors pt-2"
+              >
+                Learn More <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
@@ -99,6 +112,12 @@ export function ServicesOverview() {
               <div className="pt-2 text-sm text-neutral-600">
                 <p className="font-semibold">Compliance isn't optional—we make sure you meet provincial standards.</p>
               </div>
+              <Link 
+                href="/services/line-striping"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors pt-2"
+              >
+                Learn More <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>

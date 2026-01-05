@@ -52,18 +52,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-accent transition-colors">
+                <Link href="/services/seal-coating" className="hover:text-accent transition-colors">
                   Seal Coating
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-accent transition-colors">
+                <Link href="/services/crack-filling" className="hover:text-accent transition-colors">
                   Hot Rubber Crack Filling
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-accent transition-colors">
-                  AODA-Compliant Markings
+                <Link href="/services/line-striping" className="hover:text-accent transition-colors">
+                  AODA-Compliant Line Striping
                 </Link>
               </li>
               <li>
