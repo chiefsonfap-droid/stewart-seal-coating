@@ -148,28 +148,55 @@ export function FAQ() {
 
           <AccordionItem value="q11">
             <AccordionTrigger>
-              Do you have a referral program?
+              If cracks appear next year, will you fix them for free?
             </AccordionTrigger>
             <AccordionContent>
-              Yes! When you refer another church or organization to us, you both save money. For 
-              projects $8,000 or more: $500 each. For projects under $8,000: $250 each. Choose cash 
-              payment or credit toward your next service (Years 3–5 when resealing is typically needed). 
-              No limit on referrals.
+              It depends. If the cracks RE-OPEN in the same spot we filled (due to our work failing), 
+              yes—that's covered by our workmanship warranty. If NEW cracks form in areas that weren't 
+              cracked before (common in Ontario winters), those are considered new damage and would be 
+              quoted at our preferred client rate (20% off standard pricing). Our annual drone inspection 
+              catches new cracks early when they're cheap to fix.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="q12">
             <AccordionTrigger>
-              What is the 3-Year Stewardship Guarantee™?
+              What exactly does 'workmanship warranty' mean?
             </AccordionTrigger>
             <AccordionContent>
-              It's our promise that the work will last. It covers seal coat adhesion, crack fill 
-              durability, and line marking. To keep that promise, we include annual drone inspections 
-              for three years to catch any small surface issues before they turn into expensive problems.
+              We guarantee that our seal coating, crack filling, and line striping will perform as 
+              expected for 3 years. If our work fails prematurely due to application issues, we'll 
+              redo it at no charge. What we DON'T guarantee is that your asphalt won't develop new 
+              problems from weather, traffic, or age—because no contractor can control Ontario's 
+              freeze-thaw cycles.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="q13">
+            <AccordionTrigger>
+              Do you have a referral program?
+            </AccordionTrigger>
+            <AccordionContent>
+              Yes! Standard clients earn $400 for referring projects over $5,000 ($200 for smaller projects). 
+              Founding Communities earn $600 for projects over $5,000 ($300 for smaller), plus $1,000 milestone 
+              bonuses every 5 referrals. The referred community gets $100 off their first project. Credits can 
+              be used for future services or donated to your building fund.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q14">
+            <AccordionTrigger>
+              What is the 3-Year Stewardship Guarantee™?
+            </AccordionTrigger>
+            <AccordionContent>
+              It's our workmanship warranty that covers seal coat adhesion, crack fill durability, and 
+              line marking quality for 3 years. We include annual drone inspections to catch any small 
+              surface issues before they turn into expensive problems. If our work fails, we fix it at 
+              no charge.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="q15">
             <AccordionTrigger>
               What happens during the "Free Drone Inspection"?
             </AccordionTrigger>

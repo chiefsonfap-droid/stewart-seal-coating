@@ -25,14 +25,19 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-sm">
               <p>
+                <strong className="text-white">Phone:</strong>{" "}
                 <a href={`tel:${CONTACT.phone}`} className="hover:text-accent transition-colors">
                   {CONTACT.phone}
                 </a>
               </p>
               <p>
+                <strong className="text-white">Email:</strong>{" "}
                 <a href={`mailto:${CONTACT.email}`} className="hover:text-accent transition-colors">
                   {CONTACT.email}
                 </a>
+              </p>
+              <p className="text-neutral-400">
+                {CONTACT.address}
               </p>
             </div>
           </div>
@@ -73,6 +78,14 @@ export function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Service Areas</h3>
             <ul className="space-y-3 text-sm">
+              <li>
+                <Link
+                  href="/service-areas"
+                  className="hover:text-accent transition-colors font-semibold"
+                >
+                  All Service Areas
+                </Link>
+              </li>
               {REGIONS.map((region) => (
                 <li key={region.slug}>
                   <Link

@@ -16,12 +16,13 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-black text-neutral-900 leading-tight tracking-tight">
-                Faith Community Parking Lot Care—Handled With{" "}
-                <span className="text-primary">Stewardship</span>
+                Ontario Church & Faith Community{" "}
+                <span className="text-primary">Parking Lot Specialists</span>
               </h1>
               <p className="text-xl text-neutral-700 leading-relaxed">
-                Protecting Ontario faith community parking lots—seal coating, crack repair, and 
-                accessible markings on your schedule, with no surprises. Residential and commercial properties also welcome.
+                Professional seal coating, crack repair, and AODA-compliant striping for 
+                churches, temples, mosques, and synagogues across Ontario.{" "}
+                <strong>Commercial and residential properties near our faith projects also welcome.</strong>
               </p>
             </div>
 

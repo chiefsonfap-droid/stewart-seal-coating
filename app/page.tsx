@@ -7,10 +7,11 @@ import { HowItWorks } from "@/components/sections/HowItWorks"
 import { ServicesOverview } from "@/components/sections/ServicesOverview"
 import { AboutUs } from "@/components/sections/AboutUs"
 import { FoundingCommunities } from "@/components/sections/FoundingCommunities"
+import { ReferralProgram } from "@/components/sections/ReferralProgram"
 import { CTA } from "@/components/sections/CTA"
 import { ContactForm } from "@/components/forms/ContactForm"
 import { homeMetadata } from "@/lib/metadata"
-import { generateOrganizationSchema } from "@/lib/schema"
+import { generateOrganizationSchema, generateHomeLocalBusinessSchema, generateFAQSchema } from "@/lib/schema"
 
 // Dynamic imports for performance
 const FAQ = dynamic(() => import("@/components/sections/FAQ").then(mod => ({ default: mod.FAQ })))
@@ -23,13 +24,23 @@ export const metadata = homeMetadata
  */
 export default function HomePage() {
   const organizationSchema = generateOrganizationSchema()
+  const localBusinessSchema = generateHomeLocalBusinessSchema()
+  const faqSchema = generateFAQSchema()
 
   return (
     <>
-      {/* JSON-LD Schema */}
+      {/* JSON-LD Schemas */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Page Sections */}
@@ -42,6 +53,7 @@ export default function HomePage() {
       <AboutUs />
       <FoundingCommunities />
       <FAQ />
+      <ReferralProgram />
       
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-neutral-50">

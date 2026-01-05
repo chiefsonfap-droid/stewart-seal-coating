@@ -70,17 +70,26 @@ export function generateRegionMetadata(region: Region): Metadata {
  * Homepage metadata
  */
 export const homeMetadata: Metadata = {
-  title: "Faith Community Parking Lot Care | Steward Seal Coating",
-  description: "Ontario's faith-community-first parking lot maintenance specialist. Seal coating, crack repair, AODA-compliant markings. Serving churches, synagogues, mosques, and temples with priority scheduling. WSIB certified.",
+  title: "Church & Faith Community Parking Lot Sealing | Ontario | Steward Seal Coating",
+  description: "Professional seal coating, crack repair & AODA-compliant striping for Ontario churches, temples, mosques & synagogues. WSIB certified. 3-year guarantee. Free drone inspection.",
+  keywords: [
+    "church parking lot sealing Ontario",
+    "faith community asphalt repair",
+    "temple parking lot striping",
+    "mosque seal coating",
+    "synagogue crack repair",
+    "AODA compliant parking lot",
+    "WSIB certified contractor Ontario"
+  ],
   openGraph: {
-    title: "Faith Community Parking Lot Care—Handled With Stewardship",
-    description: "Protecting Ontario faith community parking lots—seal coating, crack repair, and accessible markings on your schedule, with no surprises.",
+    title: "Church & Faith Community Parking Lot Sealing | Ontario",
+    description: "Professional seal coating, crack repair & AODA-compliant striping for Ontario churches, temples, mosques & synagogues. WSIB certified. 3-year guarantee.",
     images: [
       {
         url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Steward Seal Coating - Faith Community Parking Lot Care'
+        alt: 'Steward Seal Coating - Ontario Church & Faith Community Parking Lot Specialists'
       }
     ],
     type: 'website',
@@ -88,8 +97,8 @@ export const homeMetadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Faith Community Parking Lot Care | Steward Seal Coating",
-    description: "Ontario's faith-community-first parking lot maintenance specialist. Serving all faith traditions with priority scheduling.",
+    title: "Church & Faith Community Parking Lot Sealing | Ontario",
+    description: "Professional seal coating, crack repair & AODA-compliant striping for Ontario faith communities. WSIB certified. 3-year guarantee.",
   },
 }
 

@@ -876,15 +876,23 @@ export function getCitiesByRegion(regionSlug: string): City[] {
 
 // Contact information
 export const CONTACT = {
-  phone: process.env.NEXT_PUBLIC_PHONE || "(555) 123-4567",
-  email: process.env.NEXT_PUBLIC_EMAIL || "info@stewardsealcoating.com",
-  address: process.env.NEXT_PUBLIC_ADDRESS || "Ontario, Canada",
+  phone: process.env.NEXT_PUBLIC_PHONE || "(XXX) XXX-XXXX",
+  email: "andrew@stewardsealcoating.ca",
+  address: "Serving all of Ontario, Canada",
 }
 
 // Founding Communities Program
 export const FOUNDING_PROGRAM = {
   totalSpots: 50,
   currentCount: parseInt(process.env.NEXT_PUBLIC_FOUNDING_COUNT || "12"),
+  priceProtection: {
+    lockYears: 5,
+    annualCapAfterLock: 3, // 3% annual cap after 5 years
+  },
+  referralTiers: {
+    standard: { over5k: 400, under5k: 200 },
+    founding: { over5k: 600, under5k: 300, milestone: 1000 }
+  },
   get spotsRemaining() {
     return this.totalSpots - this.currentCount
   },

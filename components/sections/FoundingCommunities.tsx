@@ -60,25 +60,37 @@ export function FoundingCommunities() {
               {/* Benefits Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg">
-                  <Calendar className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <DollarSign className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-lg mb-1 text-neutral-900">
-                      Lifetime Priority Scheduling
+                      5-Year Price Lock + 3% Cap
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      Your project always goes first in route planning—guaranteed
+                      Lock in 2026 pricing through 2031, then increases capped at 3% annually (vs. 5-10% market rate)
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg">
-                  <DollarSign className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <Calendar className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-lg mb-1 text-neutral-900">
-                      Price Lock Guarantee
+                      First Priority Scheduling
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      Lock in Year 1 pricing permanently. Once these spots are filled, pricing adjusts to market rates.
+                      Your project always goes first in route planning during peak season
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg">
+                  <TrendingUp className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-lg mb-1 text-neutral-900">
+                      Enhanced Referral Rewards
+                    </h4>
+                    <p className="text-sm text-neutral-600">
+                      $600 per faith community you refer (vs. $400 standard) + $1,000 milestone bonuses every 5 referrals
                     </p>
                   </div>
                 </div>
@@ -87,15 +99,15 @@ export function FoundingCommunities() {
                   <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-lg mb-1 text-neutral-900">
-                      Annual Drone Inspection Included
+                      Annual Drone Inspection
                     </h4>
                     <p className="text-sm text-neutral-600">
-                      Free aerial assessment every year at no charge
+                      Included for 3 years (same as all protection packages)
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg">
+                <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg md:col-span-2">
                   <Award className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-lg mb-1 text-neutral-900">
@@ -103,18 +115,6 @@ export function FoundingCommunities() {
                     </h4>
                     <p className="text-sm text-neutral-600">
                       Work directly with Paul and Andrew throughout your project
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 p-4 bg-neutral-50 rounded-lg md:col-span-2">
-                  <TrendingUp className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold text-lg mb-1 text-neutral-900">
-                      Referral Rewards
-                    </h4>
-                    <p className="text-sm text-neutral-600">
-                      $500 credit for projects $8,000+, $250 credit for smaller projects—for every faith community you refer to us
                     </p>
                   </div>
                 </div>

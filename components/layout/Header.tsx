@@ -2,14 +2,14 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { REGIONS } from "@/lib/constants"
+import { REGIONS, CONTACT } from "@/lib/constants"
 
 /**
  * Main site header with sticky navigation
@@ -33,9 +33,7 @@ export function Header() {
 
   const navLinks = [
     { href: "/#package", label: "Services" },
-    { href: "/#package", label: "Protection Package" },
     { href: "/#about", label: "About" },
-    { href: "/#how-it-works", label: "How It Works" },
     { href: "/#faq", label: "FAQ" },
     { href: "/#contact", label: "Contact" },
   ]
@@ -56,8 +54,17 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.slice(0, 2).map((link) => (
+          <nav className="hidden md:flex items-center gap-6">
+            {/* Phone Number */}
+            <a
+              href={`tel:${CONTACT.phone}`}
+              className="flex items-center gap-2 text-neutral-700 hover:text-primary font-semibold transition-colors duration-200"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="text-base">{CONTACT.phone}</span>
+            </a>
+
+            {navLinks.slice(0, 1).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -85,6 +92,12 @@ export function Header() {
               {/* Dropdown Menu */}
               {isDropdownOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-neutral-200 py-2 z-50">
+                  <Link
+                    href="/service-areas"
+                    className="block px-4 py-3 text-neutral-900 font-semibold hover:bg-primary/5 hover:text-primary transition-colors duration-150 text-sm border-b border-neutral-200"
+                  >
+                    All Service Areas
+                  </Link>
                   {REGIONS.map((region) => (
                     <Link
                       key={region.slug}
@@ -98,7 +111,7 @@ export function Header() {
               )}
             </div>
 
-            {navLinks.slice(2).map((link) => (
+            {navLinks.slice(1).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -123,6 +136,16 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-6 mt-8">
+                {/* Phone Number */}
+                <a
+                  href={`tel:${CONTACT.phone}`}
+                  className="flex items-center gap-3 text-lg font-semibold text-primary min-h-[48px]"
+                  onClick={closeMenu}
+                >
+                  <Phone className="h-5 w-5" />
+                  {CONTACT.phone}
+                </a>
+
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -137,6 +160,13 @@ export function Header() {
                 {/* Service Areas in Mobile Menu */}
                 <div className="space-y-2">
                   <p className="text-sm font-bold text-neutral-500 uppercase tracking-wide">Service Areas</p>
+                  <Link
+                    href="/service-areas"
+                    onClick={closeMenu}
+                    className="block text-base font-semibold text-neutral-900 hover:text-primary transition-colors py-2 pl-4"
+                  >
+                    All Areas
+                  </Link>
                   {REGIONS.map((region) => (
                     <Link
                       key={region.slug}
