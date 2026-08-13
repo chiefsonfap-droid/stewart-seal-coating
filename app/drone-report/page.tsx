@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GhlFormEmbed } from "@/components/GhlFormEmbed";
 
 export const metadata: Metadata = {
   title: "Drone Condition Report — $129 + HST | Steward Seal Coating",
@@ -123,6 +124,24 @@ export default function Page() {
       </section>
 
       <section className="border-t border-[var(--line)] bg-[var(--bg-2)]">
+        <div className="mx-auto max-w-3xl px-5 py-20 md:py-24">
+          <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--accent)]">
+            Lead capture · not checkout
+          </p>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-2xl sm:text-3xl">
+            Start your paid report request
+          </h2>
+          <p className="mt-4 text-sm leading-relaxed text-[var(--paper-dim)]">
+            This form captures your details for the $129 + HST Drone Condition
+            Report. It is not payment. Booking and checkout stay on the book page.
+          </p>
+          <div className="mt-8">
+            <GhlFormEmbed formId="dcAN8IxSHr8526AuKPxF" title="Paid Drone Condition Report" />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[var(--line)]">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
           <p className="text-lg text-[var(--paper-dim)]">Ready for a clear picture of your lot?</p>
           <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl">
