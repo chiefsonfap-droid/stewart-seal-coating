@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #111315;
+  --bg-2: #191c1f;
+  --bg-3: #23282d;
+  --paper: #eceae6;
+  --paper-dim: rgba(236, 234, 230, 0.74);
+  --mist: #d4d0c8;
+  --muted: #8f8a82;
+  --accent: #d4652f;
+  --accent-ink: #111315;
+  --line: rgba(236, 234, 230, 0.1);
+  --line-strong: rgba(236, 234, 230, 0.22);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--paper);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 75%, white);
+  color: var(--accent-ink);
+}
