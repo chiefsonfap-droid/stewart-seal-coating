@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Archivo, Source_Sans_3 } from "next/font/google";
 import { content } from "@/content";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -42,7 +43,12 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <MobileStickyCta />
-        {/* Chat widget slot — Steward GHL uf3jzmw1YurT1UHhcCI1. Install script from Specialist only. No stub widget ID. */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          strategy="afterInteractive"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a7d4c4d3bd71d5bd4bd29f5"
+        />
       </body>
     </html>
   );
