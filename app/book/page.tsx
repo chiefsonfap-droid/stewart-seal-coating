@@ -59,9 +59,10 @@ export default function Page() {
               Calendar — On-site drone flight
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-[var(--paper-dim)]">
-              Appointment type: On-site drone flight. Duration 90 minutes, 15 min buffers
-              before/after, typically 3–5 flights a day. GHL Specialist snippet not ready.
-              This is a labeled placeholder — not a live calendar.
+              This calendar books the on-site drone flight — a clustered Sudbury day, not
+              a call. Duration 90 minutes, 15 min buffers before/after, typically 3–5
+              flights a day. GHL Specialist snippet not ready. Labeled placeholder — not
+              a live calendar.
             </p>
           </div>
           <div className="border border-dashed border-[var(--line-strong)] bg-[var(--bg)] p-6">
