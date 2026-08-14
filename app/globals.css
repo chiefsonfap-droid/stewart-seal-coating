@@ -1,42 +1,97 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
-  }
+/*
+ * Steward Seal Coating — staging.
+ * Editorial workshop system: warm parchment canvas, warm near-black ink,
+ * hairline rules, one dark "seal coat" band reserved for the footer and
+ * primary actions. No gradients, no shadows, no rounded corners.
+ */
+
+:root {
+  --parchment: #eae7df;
+  --bone: #f4f1ea;
+  --ink: #26231d;
+  --stone: #6d675b;
+  --faint: #938d7e;
+  --line: rgba(38, 35, 29, 0.28);
+  --line-soft: rgba(38, 35, 29, 0.14);
+  --seal: #211d17;
+  --seal-soft: rgba(239, 235, 227, 0.74);
+  --seal-line: rgba(239, 235, 227, 0.2);
+  --on-seal: #efebe3;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
+html {
+  scroll-behavior: smooth;
+  background: var(--parchment);
+}
+
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 }
 
+::selection {
+  background: var(--ink);
+  color: var(--parchment);
+}
+
+/* Chapter mark — tracked small caps used above every section. */
+.chapter {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #59544a;
+}
+
+/* Display serif — the single expressive voice. Wide tracking is signature.
+   Weight 600: Cormorant is light-stroked and turns spindly below that at display size. */
+.display {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+/* Primary action — dark seal band, parchment text, sharp corners. */
+.btn-seal {
+  display: inline-flex;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--seal);
+  color: var(--on-seal);
+  padding: 0 2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background-color 150ms ease;
+}
+
+.btn-seal:hover {
+  background: #38332a;
+}
+
+/* Quiet secondary action — text with a hairline underline. */
+.link-rule {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--line);
+}
+
+.link-rule:hover {
+  text-decoration-color: var(--ink);
+}
