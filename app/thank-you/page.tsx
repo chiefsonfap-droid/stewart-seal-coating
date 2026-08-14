@@ -10,24 +10,21 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-20 md:py-28">
-      <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--accent)]">Received</p>
-      <h1 className="mt-5 font-[family-name:var(--font-display)] text-[2.2rem] leading-[1.12] sm:text-5xl">
-        A person will reply
-      </h1>
-      <p className="mt-6 text-base leading-relaxed text-[var(--paper-dim)] sm:text-lg">
+    <main id="main" className="mx-auto max-w-3xl px-6 py-28 text-center md:py-40">
+      <p className="chapter">Received</p>
+      <h1 className="display mt-8 text-4xl sm:text-5xl">A person will reply.</h1>
+      <p className="mx-auto mt-8 max-w-xl text-base leading-[1.8] text-[var(--stone)]">
         Thanks — we received your request. Someone from Steward will follow up by
         email. We do not list a public phone number on this staging site.
       </p>
-      <p className="mt-4 text-sm leading-relaxed text-[var(--paper-dim)]">
+      <p className="mx-auto mt-5 max-w-xl text-sm leading-[1.8] text-[var(--faint)]">
         Payment is not collected here yet. Stripe checkout is still with Frank.
       </p>
-      <Link
-        href="/"
-        className="mt-10 inline-flex h-12 items-center justify-center border border-[var(--line-strong)] px-6 text-sm"
-      >
-        Back to home
-      </Link>
+      <div className="mt-12">
+        <Link href="/" className="link-rule text-sm">
+          Back to home
+        </Link>
+      </div>
     </main>
   );
 }

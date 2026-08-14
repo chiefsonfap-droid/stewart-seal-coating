@@ -16,13 +16,15 @@ export const GHL = {
   legacyInspectionFormId: "cWkRdLH8OOIwvBufX5yt",
 } as const;
 
+/** Travel policy: Sudbury-area, about an hour out by default. Farther by arrangement. */
+export const SERVICE_AREA =
+  "We work within about an hour’s drive of Sudbury by default. Farther is by arrangement — ask, and we will say honestly whether the trip makes sense.";
+
 export const content = {
-  title: "Steward Seal Coating — Sudbury and Northern Ontario",
+  title: "Steward Seal Coating — Sudbury, Ontario",
   description:
-    "On-site parking-lot work from Sudbury and Northern Ontario. Paid Drone Condition Report — $129 CAD + HST. The $129 is credited if you proceed with qualifying lot work. Staging — not indexed.",
+    "On-site parking-lot work from Sudbury, Ontario. Drone Condition Report — $129 CAD + HST, credited toward qualifying lot work if you proceed. Staging — not indexed.",
   wordmark: "Steward Seal Coating",
-  wordmarkNote: "Sudbury · Northern Ontario · staging",
-  mark: "S",
-  navCta: "Get the $129 CAD + HST report",
+  wordmarkNote: "Sudbury, Ontario · Staging",
   legalName: LEGAL_NAME,
 };

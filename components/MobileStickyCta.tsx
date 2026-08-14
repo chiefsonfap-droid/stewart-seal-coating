@@ -1,21 +1,17 @@
 import Link from "next/link";
-import { OFFER } from "@/content";
 
 export function MobileStickyCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line)] bg-[var(--bg)]/95 p-3 backdrop-blur-md md:hidden">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-2">
-        <Link
-          href="/drone-report"
-          className="inline-flex h-11 items-center justify-center bg-[var(--accent)] px-3 text-center text-xs font-semibold tracking-wide text-[var(--accent-ink)]"
-        >
-          {OFFER.price} report
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--line-soft)] bg-[var(--parchment)]/95 backdrop-blur-sm md:hidden">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3">
+        <Link href="/#quote" className="link-rule text-[12px] text-[var(--stone)]">
+          Request a quote
         </Link>
         <Link
-          href="/#quote"
-          className="inline-flex h-11 items-center justify-center border border-[var(--line-strong)] px-3 text-center text-xs font-semibold tracking-wide text-[var(--paper)]"
+          href="/drone-report"
+          className="inline-flex h-11 items-center justify-center bg-[var(--seal)] px-5 text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--on-seal)]"
         >
-          Request a quote
+          The $129 report
         </Link>
       </div>
     </div>
